@@ -28,9 +28,38 @@
                 Vision Statement for PinPin Biotech.co  <!-- TODO: Below this heading I should place a logo foto -->
             </h2>   
 
-            <img src="https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/Imagen%20de%20WhatsApp%202024-06-08%20a%20las%2015.34.01_a2a4aa56.jpg?raw=true"
-                 alt=""> <!--TO KNOW: the imag tag is a self-closing tag (It have a opening tag without a closing tag)
-                            TODO: write about alt, resize the image-->
+            <!--TO KNOW: the imag tag is a self-closing tag (It have a opening tag without a closing tag)-->
+            <!-- Attributes:
+                    - src: this attribute defina the source URL of the photo
+                    - alt: In those cases when the user have a non-graphical browser o the browser cannot display
+                            the image for any reason, this atribute place a description (text) of the image. Therefor,
+                            - if it's a key part of the document  this attribute should be omitted, 
+                            - otherwise, it should be setting like an empty attribute (alt = "") indicating that this is 
+                                a decorative element, and that non-graphical browser may omit it in the render
+                    - title: This is text representing  advisory information about the image. It's not necesarily.
+                             It's presenting for the user like a tooltip 
+                    - width: the intrinsic width of the image in pixel
+                    - height: the intrinsic heigth of the image in pixel.
+                            IMPORTANT: IMPORTANT: If there're one dimensions, the image will be adjusted based on that, 
+                                        without losing proportions.
+                    - loading: Indicate how browser should load an image. It's only has two attributes: 
+                                -   lazy (better performance, but it's fot non-key image because the load defers from the page)
+                                -   eager (Key image)
+                    - srcset: It indicates posible images source to make most responsive the document(url + width(w) / pixel density(1))
+                    - size: this atribute set a list of sources size for the different srcset (condition + source size value) -->
+                    
+            <img src="https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/logo.jpg?raw=true"
+                 alt="" 
+                 title="Company logo"
+                 width="200"
+                 loading="lazy"
+                 srcset="https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/logo.jpg?raw=true 200w,
+                 https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/logo.jpg?raw=true 400w,
+                 https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/logo.jpg?raw=true 800w"
+                 sizes="(max-width = 600px) 100vw,
+                        (max-width = 1200px) 50vw,
+                        33vw"
+            >   
             
             <p> 
                 At PinPin Biotech.co, we envision a world where innovative biotechnology revolutionizes healthcare 
