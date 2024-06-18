@@ -19,7 +19,8 @@
                               The <main> element is intended to represent the main content area of a document, 
                               and its purpose is to improve document structure, accessibility, and SEO by clearly 
                               identifying the primary content section.-->
-            <section>   <!-- TO KNOW: The section element is used to define sections in a document, such as chapters, 
+            <section>   <!-- ! HEADER -->
+                        <!-- TO KNOW: The section element is used to define sections in a document, such as chapters, 
                             headers, footers, or any other sections of the document. It is a semantic element
                             that helps with SEO and accessibility. 
                             Each section should be identified at least by a heading h1-h6. Lower priority headings within same
@@ -63,7 +64,7 @@
                 >   
             </section>
             
-            <section>
+            <section>   <!-- ! ENTERPRISE ViSION -->
                 <h2>
                     Vision Statement for PinPin Biotech.co  
                 </h2> 
@@ -107,7 +108,7 @@
             </section>
         </main>
         
-        <section>
+        <section>   <!-- ! PRODUCTS -->
             <figure>    <!-- Figure element represent a self-contained content(code, image, etc) and allow you to associate it with a caption ( <figcaption> ) -->
                 <img src="https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/HTML%20Building%20a%20Photo%20APP/media/MainCampus.jpg?raw=true" 
                      alt="Image of Main Campus Pinpin Biotech.co, Lugo-Coruña-Spain"
@@ -136,19 +137,58 @@
             </ol>
         </section>
 
-
-        <section>
+        <section>   <!-- ! CONTACT -->
             <h5>Lugo-Coruña-Spain
-            <a href="mailto:achf16@gmail.com" target="_blank" rel="noopener noreferrer">Contact us by email</a> <!-- TO KNOW: anchor <a> is an hiperlink(href,hipertext)
+            <a href="mailto:test@gmail.com" target="_blank" rel="noopener noreferrer">Contact us by email</a> <!-- TO KNOW: anchor <a> is an hiperlink(href,hipertext)
                                                                                     labeled by its context 
                                                                             IMPORTANT: You can turn any text/photo to a link adding
                                                                             the anchor tag label (for the image you should 
                                                                             surrounding the <img> tag with the <a>)-->
             <!-- Target attribute indicates where to display the URL: self, blank, parent, top; 
                 and should be compained by a rel attribute with "noopener noreferrer" to avoid security vulnerabilities-->
-            </h5>
-            <form action=""></form> <form action="" method="get"></form> <form action="" method="post"></form>
+             or fill the blanks  below and we will contact you.</h5>
+
+            <form action="" method="post" enctype="multipart/form-data">    <!-- <form>:  is a document sections that containt interactive controls for submitting information to the web server  -->
+                                <!-- action:  specifies the URL to which the form data will be sent when the form is submitted
+                                                The information could be submited to:
+                                                    Relative URL: local direction   /submit-form    (local path)
+                                                    Absolute URL:                   https://www.example.com/submit-form
+                                                    Empty Action:                   the form will be submitted to the same URL as the form's page
+                                                    Server Script:                 /path/to/server/script.php -->
+                                <!-- enctype: attribute specifies how the form data should be encoded when submitting it to the server. It is used only with the POST method 
+                                     method:  Specifies the HTTP method to use for the browser when sending data. The posible values are:
+                                                - GET: Retrieves data, visible in URL, limited length, suitable for searches.
+                                                - POST: Submits data, invisible in URL, no length limit, suitable for forms.
+                                                - <dialog>: Creates dialog boxes, interactive elements, suitable for pop-ups and modal forms.--> 
+                                
+                <!-- TODO:  make an input menu below Contact-->
+                <label for="ClientName">Full Name</label> <!-- label: it's an HTML element used to define a label for an input element. There are two ways of association:
+                                                    - with Form controls: Use the for attribute to link the label to a form element's id
+                                                    - Implicit:  You can wrap the input element inside the label to create an implicit association. -->
+                <input type="text" id="ClientName" name="ClientName" placeholder="Ex. James Travis" required> 
+                <!-- input: allows you several ways to collect data form the web form. Self-closing tag.
+                        type:  define what kind of input will be submitting(text,date,file...)
+                            name:  Identifier for form data and grouping form elements. In order for a form's 
+                            id:    Unique identifier for styling and scripting.
+                        placeholder: is a text used to give a people a hint about what kind of information to enter into an input
+                        required: To prevent a user submitting your form when required information is missing.-->
+
+                <label>Phone number: <input type="number" placeholder="Ex. +53 56895474" required name="ClientEmail"></label>
+                
+                <label for="WayToComunicateWith_DropList">Choose a way for contact you:</label>
+                <select name="WayToComunicateWith_DropList" id="WayToComunicateWith_DropList">  <!-- select: represent a control for selecting amongst a set of options -->
+                    <option value="Whtpp">Whatsapp</option>
+                    <option value="Teleg">Telegram</option>
+                    <option value="Call">Direct Call</option>
+                </select>
+                
+                
+                <button type="submit">Submit</button> <!-- Button: is used to create a clickable button. This element without attributes submits the form to the same location specified in the form's
+                                                     action attribute but, may cause confusion. For that reason it's necesary to add the type attribute.-->
+   
+            </form>
         </section>
+
 
     
               
