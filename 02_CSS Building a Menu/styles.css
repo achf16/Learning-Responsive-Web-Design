@@ -1,6 +1,16 @@
 h1{text-transform: capitalize;}
 h1,h2,p{text-align: center;}
-body{background-color:rgb(21, 112, 21)}
+body{
+    /* background-color:rgb(21, 112, 21) */
+    background-image: url();
+    }
 
-#menu{width: 300px;
-      background-color: rgb(255, 234, 43);}
+/* ? The differences between #menu and .menu in CSS for styling are based on how they select HTML elements.
+    ?        ID (#): Unique, single element.
+    ?        Class (.): Reusable, multiple elements.*/
+.menu{width: 80%;
+      background-color: rgb(255, 234, 43);
+      margin-left: auto;
+      margin-right: auto;
+     }
+
