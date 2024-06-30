@@ -3,30 +3,28 @@ h1,h2,p{text-align: center;}
 body{
     /* background-color:rgb(21, 112, 21) */
     background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background.jpg?raw=true);
-    }
-
-/* ? The differences between #menu and .menu in CSS for styling are based on how they select HTML elements.
-    ?        ID (#): Unique, single element.
-    ?        Class (.): Reusable, multiple elements.*/
-.menu{width: 30%;
-      background-color: rgb(255, 234, 43);
-      /* margin-left: auto; */ /* This is for a center div */
-      /* margin-right: auto; */
-      position:absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0;  
-      padding: 0; /* This eliminate the padding, if it is necesary
-                     Padding is the space between the content of an element an its border */
-     }
-
-#logo
-{
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    
 }
+
+.menu {
+    width: 30%;
+    background-color: rgba(0, 77, 45, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0; /* This eliminate the padding, if it is necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: start; /* Center vertically */
+}
+
+#logo {
+    display: block; /* Ensure the image is a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+    /* margin-top: 20px; */ /* Add some space from the top if needed */
+}
+
 
     
