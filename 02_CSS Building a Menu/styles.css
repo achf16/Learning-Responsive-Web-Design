@@ -1,8 +1,13 @@
-h1{text-transform: capitalize;}
-h1,h2,p{text-align: center;}
+h1{
+    text-transform: capitalize;
+    
+    }
+h1,h2,p{text-align: center;
+        color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
     background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background.jpg?raw=true);
+    /* background-size:cover; */ /* TODO: make the a fixed size for background */
 }
 
 .menu {
@@ -24,8 +29,18 @@ body{
     display: block; /* Ensure the image is a block-level element */
     margin: 0 auto; /* Center the image horizontally */
     /* margin-top: 20px; */ /* Add some space from the top if needed */
-    border: 1px solid #333; /* Solo para visualizar el div hijo */
+   /*  border: 1px solid #333; */ /* Solo para visualizar el div hijo */
+   margin-top: 10px;
 }
 
+.articles_items p{display: inline-block;}
+.product{
+    text-align: left;
+    width: 50%;
+}
+.price{
+    text-align: right;
+    width: 50%;
+}
 
     
