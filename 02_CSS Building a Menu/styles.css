@@ -7,7 +7,7 @@ h1,h2,p{text-align: center;
 body{
     /* background-color:rgb(21, 112, 21) */
     background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background.jpg?raw=true);
-    /* background-size:cover; */ /* TODO: make the a fixed size for background */
+     /* background-size:cover;  */ /* TODO: make the a fixed size for background */
 }
 
 .menu {
@@ -18,9 +18,9 @@ body{
     right: 0;
     bottom: 0;
     margin: 0;
-    padding: 0; /* This eliminate the padding, if it is necessary */
+    padding: 20px;  /* This eliminate the padding, if it is necessary */
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center; /* Center horizontally */
     justify-content: start; /* Center vertically */
 }
