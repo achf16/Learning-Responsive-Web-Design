@@ -6,18 +6,19 @@ h1,h2,p{text-align: center;
         color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
-    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/newback.jpeg?raw=true);
-     background-size:cover;  /* TODO: make the a fixed size for background */
+    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background1950x1300.jpg?raw=true);
+    background-size:contain;  
 }
 
 .menu {
-    width: 30%;
+    width: 50%;
     background-color: rgba(0, 77, 45, 1);
     /* position: absolute; */
     /* top: 0;
     right: 0;
     bottom: 0;
     margin: 0; */
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%; /* Ensures the div grows with content */
@@ -35,7 +36,12 @@ body{
    margin-top: 10px;
 }
 
-.articles_items p{display: inline-block;}
+.articles_items p{
+                    display: inline-block;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    /* There are 5 fallback here: fonts listed with single quotes ('') are treated as exact names, 
+                    which is necessary when the font name contains spaces or special characters */
+                }
 .product{
     text-align: left;
     width: 50%;
@@ -45,4 +51,14 @@ body{
     width: 50%;
 }
 
-    
+.italicized{
+    font-style: italic;
+}
+
+h1  {
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
