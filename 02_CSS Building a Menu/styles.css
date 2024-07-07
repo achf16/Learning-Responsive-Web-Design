@@ -7,17 +7,19 @@ h1,h2,p{text-align: center;
 body{
     /* background-color:rgb(21, 112, 21) */
     background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background.jpg?raw=true);
-     /* background-size:cover;  */ /* TODO: make the a fixed size for background */
+     background-size:cover;  /* TODO: make the a fixed size for background */
 }
 
 .menu {
     width: 30%;
     background-color: rgba(0, 77, 45, 1);
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0;
     right: 0;
     bottom: 0;
-    margin: 0;
+    margin: 0; */
+    margin-left: auto;
+    margin-right: auto;
     min-height: 100%; /* Ensures the div grows with content */
     padding: 20px;  
     flex-direction:column;
