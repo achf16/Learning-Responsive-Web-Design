@@ -6,8 +6,9 @@ h1,h2,p{text-align: center;
         color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
-    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background1950x1300.jpg?raw=true);
-    background-size:contain;  
+    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/main/02_CSS%20Building%20a%20Menu/media/background1950x1300.jpg?raw=true);
+    background-size:contain; 
+    padding: 20px; 
 }
 
 .menu {
@@ -41,6 +42,8 @@ body{
                     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     /* There are 5 fallback here: fonts listed with single quotes ('') are treated as exact names, 
                     which is necessary when the font name contains spaces or special characters */
+                    margin-top: 5px;
+                    margin-bottom: 5px;
                 }
 .product{
     text-align: left;
@@ -61,4 +64,14 @@ h1  {
 
 h2{
     font-size: 30px;
+}
+
+.footer a{
+    color: #5dc226;
+}
+
+hr{
+    height: 3px;
+    background-color:#5dc226;
+    border-color:#5dc226;
 }
