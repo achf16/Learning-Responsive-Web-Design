@@ -6,7 +6,7 @@ h1,h2,p{text-align: center;
         color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
-    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background.jpg?raw=true);
+    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/newback.jpeg?raw=true);
      background-size:cover;  /* TODO: make the a fixed size for background */
 }
 
