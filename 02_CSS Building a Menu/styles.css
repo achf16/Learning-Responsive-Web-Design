@@ -6,8 +6,9 @@ h1,h2,p{text-align: center;
         color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
-    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/main/02_CSS%20Building%20a%20Menu/media/background1950x1300.jpg?raw=true);
-    background-size:contain; 
+    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background1950x2600.jpg?raw=true);
+    background-size:cover; 
+    background-position-y: -115px;
     padding: 20px; 
 }
 
