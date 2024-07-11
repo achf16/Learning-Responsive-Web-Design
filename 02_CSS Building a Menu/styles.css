@@ -44,7 +44,9 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
+    max-width: 50px;
 }
+
 
 .articles_items p{
                     display: inline-block;
