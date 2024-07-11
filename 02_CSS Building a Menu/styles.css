@@ -1,12 +1,13 @@
 h1{
     text-transform: capitalize;
+    margin-bottom: 15px;
     
     }
 h1,h2,p{text-align: center;
         color: #e5b400;}
 body{
     /* background-color:rgb(21, 112, 21) */
-    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/dev/02_CSS%20Building%20a%20Menu/media/background1950x2600.jpg?raw=true);
+    background-image: url(https://github.com/achf16/Learning-Responsive-Web-Design/blob/main/02_CSS%20Building%20a%20Menu/media/background1950x2600.jpg?raw=true);
     background-size:cover; 
     background-position-y: -115px;
     padding: 20px; 
@@ -45,7 +46,11 @@ body{
                     which is necessary when the font name contains spaces or special characters */
                     margin-top: 5px;
                     margin-bottom: 5px;
+                    font-size: 18px;
                 }
+
+
+
 .product{
     text-align: left;
     width: 50%;
@@ -67,12 +72,42 @@ h2{
     font-size: 30px;
 }
 
-.footer a{
+/* .footer a{
     color: #5dc226;
-}
+} */
 
 hr{
     height: 3px;
     background-color:#5dc226;
     border-color:#5dc226;
+}
+
+.bottom-line{
+    margin-top: 25px;
+}
+
+/* FOOTER */
+footer{
+    font-size: 14px;
+}
+
+/* * LVHA */
+a:link{
+    color: #5dc226;
+}
+
+a:visited{  /* Pseudo-selectors in CSS are used to style specific parts or 
+                states of elements without the need for extra classes or 
+                IDs. They help target elements based on their state, 
+                position, or content, providing more control and flexibility 
+                in styling. */
+    color: aliceblue;
+}
+
+a:hover{
+    color: #5dc226;
+}
+
+a:active{
+    color: #5dc226;
 }
