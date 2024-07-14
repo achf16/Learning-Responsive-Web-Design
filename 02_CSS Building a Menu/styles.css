@@ -22,13 +22,13 @@ body{
     right: 0;
     bottom: 0;
     margin: 0; */
-    max-width: 80%;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%; /* Ensures the div grows with content */
     padding: 20px; 
-    padding-left: 70px;
-    padding-right: 70px; 
+    /* padding-left: 70px;
+    padding-right: 70px;  */
     flex-direction:column;
     align-items: center; /* Center horizontally */
     justify-content: start; /* Center vertically */
@@ -59,7 +59,7 @@ body{
                     margin-top: 5px;
                     margin-bottom: 5px;
                     font-size: 18px;
-                    max-width: 500px;
+                    /* max-width: 500px; */
                     /* margin-left: auto;
                     margin-right: auto; */
                 }
@@ -67,11 +67,11 @@ body{
 
 
 .product{
-    text-align: center;
+    text-align: left;
     width: 50%;
 }
 .price{
-    text-align: center;
+    text-align: right;
     width: 50%;
 }
 
