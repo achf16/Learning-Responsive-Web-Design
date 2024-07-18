@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+
+.crayons{
+    width: 300px;
+    height: 30px;
+    /* background-color: red; */
+    margin: 12px auto;  /* the margin property is a shorthand way to set margin-top, margin-bottom,
+                            margin-left, and margin-right at the same time. It has two values:
+                            the first one is associate to top and bottom, the second to left and right; */
+    width: 300px;
+    height: 30px;
+}
+
+.one{
+    background-color: yellow;
+}
+
+.two{
+    background-color: gray;
+}
+
+.three{
+    background-color: black;
+}
+
+.container{
+    background-color: rgb(0, 0, 45);
+    padding: 11px 0;    /* It has two values: the first one is associate to top 
+                            and bottom, the second to left and right */
+}
