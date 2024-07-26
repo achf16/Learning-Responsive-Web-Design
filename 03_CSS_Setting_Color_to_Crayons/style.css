@@ -22,11 +22,15 @@ h1{
 }
 
 .three{
-    background-color: black;
+    background: linear-gradient(180deg,#007575 70%,hsl(75,100%,75%) 75%, green 90%);    /* For the use of the linear-gradient is important to change the property background-color
+                                        for background, because the linear-gradient is readed by the PC like a photo.
+                                        Basic syntax: linear-gradient(gradientDirection, color1, color2, ...); 
+                                        --The values in px or % after a color represent the length that follow a color in 
+                                            the linear-gradient function and they are named Color-stops*/
 }
 
 .container{
-    background-color: rgb(0, 0, 45);
+    background-color: hsl(25, 75%, 75%);
     padding: 11px 0;    /* It has two values: the first one is associate to top 
                             and bottom, the second to left and right */
 }
