@@ -14,15 +14,19 @@ h1{
 }
 
 .one{
-    background-color: yellow;
+    background: linear-gradient(hsl(59,115%,35%), hsl(69,200%,150%), hsl(79,15%,45%));
 }
 
 .two{
-    background-color: gray;
+    background: linear-gradient(180deg,rgb(64,27,100) , rgb(150,23,245), rgb(40,45,89));
+    /* The color stops after each color parameter in the linear-gradient property of background sometimes isn't necesary
+    because the funtion liner-gradient automatically calculates these values for you, and places colors evenly along the 
+    gradient line by default
+    Is unnecesary to put 180deg of gradient direction. This parameter could be omitted if the direction angle is 180*/
 }
 
 .three{
-    background: linear-gradient(180deg,#007575 70%,hsl(75,100%,75%) 75%, green 90%);    /* For the use of the linear-gradient is important to change the property background-color
+    background: linear-gradient(180deg,#007575 0%,hsl(75,100%,75%) 50%, green 100%);    /* For the use of the linear-gradient is important to change the property background-color
                                         for background, because the linear-gradient is readed by the PC like a photo.
                                         Basic syntax: linear-gradient(gradientDirection, color1, color2, ...); 
                                         --The values in px or % after a color represent the length that follow a color in 
@@ -33,4 +37,19 @@ h1{
     background-color: hsl(25, 75%, 75%);
     padding: 11px 0;    /* It has two values: the first one is associate to top 
                             and bottom, the second to left and right */
+}
+
+.sleeve{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* rgba(redValue, greenValue, blueValue, alphaValue); */
+}
+
+.space_before_sleeve{
+    width: 60px;
+    height: 30px;
+}
+
+.sleeve, .space_before_sleeve{
+    display: inline-block;
 }
