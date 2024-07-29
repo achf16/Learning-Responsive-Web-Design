@@ -15,6 +15,7 @@ h1{
 
 .one{
     background: linear-gradient(hsl(59,115%,35%), hsl(69,200%,150%), hsl(79,15%,45%));
+    box-shadow: 0 0 20px 0 rgba(84, 84, 0, 0.8); /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
 }
 
 .two{
@@ -23,6 +24,7 @@ h1{
     because the funtion liner-gradient automatically calculates these values for you, and places colors evenly along the 
     gradient line by default
     Is unnecesary to put 180deg of gradient direction. This parameter could be omitted if the direction angle is 180*/
+    box-shadow: 0 0 20px 0 rgba(84, 0, 84, 0.8);
 }
 
 .three{
@@ -30,7 +32,8 @@ h1{
                                         for background, because the linear-gradient is readed by the PC like a photo.
                                         Basic syntax: linear-gradient(gradientDirection, color1, color2, ...); 
                                         --The values in px or % after a color represent the length that follow a color in 
-                                            the linear-gradient function and they are named Color-stops*/
+                                            the linear-gradient function and they are named Color-stops*/  
+    box-shadow: 0 0 20px 0 rgba(150, 50, 0, 0.8);
 }
 
 .container{
@@ -40,16 +43,24 @@ h1{
 }
 
 .sleeve{
-    width: 100px;
+    width: 180px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.5); /* rgba(redValue, greenValue, blueValue, alphaValue); */
+/*     border-left-color: #007575;
+    border-left-width: 10px;
+    border-left-style: solid; */    
+    /* The next code line is a shorthand property that cover the three before in one */
+    border-left: 10px double rgba(0, 0, 0, 0.75);  /* border-left: width style color; */
 }
 
 .space_before_sleeve{
-    width: 60px;
+    width: 80px;
     height: 30px;
 }
 
 .sleeve, .space_before_sleeve{
     display: inline-block;
 }
+
+/* box-shadow: offsetX offsetY color;
+ */
