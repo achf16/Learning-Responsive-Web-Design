@@ -1,3 +1,17 @@
-h1{
-    color: ;
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    /* vh: viewport height.
+    It is a relative unit of measurement used to size elements based on the height of the viewport
+    (the visible area of a web page).
+        - 1vh equals 1% of the viewport's height.
+        - 100vh equals the full height of the viewport.*/
+    background-color: #34414E;  /* background color of the element*/
+    color: #a68f79; /*  Color text and text decorations*/
+}
+
+label{
+    display: block;
+    margin: 0.5rem 0;
 }

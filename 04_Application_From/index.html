@@ -1,15 +1,39 @@
-<!DOCTYPE html>
+<!-- There are two important definitions to understand when you try to build a responsive and scalable webpage
+-    1. Root element: The root element is the element that contains all other elements. It's the <html> element.
+-    2. Parent element: The parent element is the element that contains other elements. Some examples of parent elements
+        are <body> and <div>, but they can also be other elements like <header> and <footer>.
+-   Those terms are associated with rem and em in CSS:
+    1.  em: A relative unit based on the font size of the parent element.
+    2.  rem: A relative unit based on the font size of the root element (<html>).
+-   Use Cases:
+    1.  em: Useful for scaling elements in a relative context, such as adjusting the padding or margin relative to the
+            font size of the parent element.
+    2.  rem: Useful for maintaining consistency across the document, like setting a base size for typography and spacing
+            that scales uniformly.-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.ccs">
+        <link rel="stylesheet" href="styles.css">
         <title>Application Form</title>
     </head>
     <body>
         <main>
-            <h1>Hola</h1>
+            <h1>Application Form</h1>
+            <p>Please complete this form with the necessary details.</p>
+            <form action="https://register-demo.freecodecamp.org" method="post" enctype="multipart/form-data">
+                <fieldset>
+                         <label>First Name:</label>
+                       <label>Last Name:</label>
+                    <label>Email:</label>
+                    <label>Password:</label>
+                </fieldset>
+                <fieldset></fieldset>
+                <fieldset></fieldset>
+                <fieldset></fieldset>
+
+            </form>
         </main>
         
         <footer>

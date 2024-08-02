@@ -9,8 +9,6 @@ h1{
     margin: 12px auto;  /* the margin property is a shorthand way to set margin-top, margin-bottom,
                             margin-left, and margin-right at the same time. It has two values:
                             the first one is associate to top and bottom, the second to left and right; */
-    width: 300px;
-    height: 30px;
 }
 
 .one{
