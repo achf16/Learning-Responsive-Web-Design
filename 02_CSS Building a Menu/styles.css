@@ -38,8 +38,8 @@ body{
     display: block; /* Ensure the image is a block-level element */
     margin: 0 auto; /* Center the image horizontally */
     /* margin-top: 20px; */ /* Add some space from the top if needed */
-   /*  border: 1px solid #333; */ /* Solo para visualizar el div hijo */
-   margin-top: 10px;
+    /*  border: 1px solid #333; */ /* Solo para visualizer el div hijo */
+    margin-top: 10px;
 }
 
 .section_logos{
