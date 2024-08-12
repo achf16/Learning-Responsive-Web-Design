@@ -23,30 +23,31 @@
       <h1>Application Form</h1>
       <p>Please complete this form with the necessary details.</p>
       <form
-        action="https://register-demo.freecodecamp.org"
+        action=""
         method="post"
         enctype="multipart/form-data"
-      >
+      > <!-- Empty Action:  the form will be submitted to the same URL as the form's page-->
+
         <fieldset>
-          <label>
-            First Name: <input>
-          </label>
+          <label>First Name: <input type="text" required placeholder=" James"></label>
 
-          <label>
-            Last Name: <input>
-          </label>
+          <label>Last Name: <input type="text" required placeholder=" Bond "></label>
 
-          <label>
-            Email: <input>
-          </label>
+          <label>Email: <input type="email" required placeholder=" jbond07@email.com"></label>
 
-          <label>
-            Password: <input>
-          </label>
+          <label>Password: <input type="password" required placeholder=" **********"> </label>
         </fieldset>
+
         <fieldset></fieldset>
         <fieldset></fieldset>
         <fieldset></fieldset>
+
+<!--        When you add an <input> element with type="submit" inside a form, it automatically creates a submit button that
+        sends the form data to the server. This input element triggers the form submission when clicked.
+        To handle the form submission, you place this submit button (the <input> with type="submit") after your last
+        <fieldset> element. The value attribute of this input defines the text displayed on the button (e.g., "Submit", "Send"). -->
+        <input type="submit" value="Send">
+
       </form>
     </main>
 
