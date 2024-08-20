@@ -29,16 +29,30 @@
       > <!-- Empty Action:  the form will be submitted to the same URL as the form's page-->
 
         <fieldset>
-          <label>First Name: <input type="text" required placeholder=" James"></label>
+          <label for="firstName">First Name: <input type="text"
+                                                    placeholder=" James"
+                                                    id="firstName"
+                                                    pattern="^[A-Z]+([ '-][A-Za-z]+)*$"
+                                                    required>
+          </label>
 
-          <label>Last Name: <input type="text" required placeholder=" Bond "></label>
+          <label for="lastName">Last Name: <input type="text"  placeholder=" Bond "   id="lastName" pattern="^[A-Z]+([ '-][A-Za-z]+)*$" required></label>
 
-          <label>Email: <input type="email" required placeholder=" jbond07@email.com"></label>
+          <label for="email">Email: <input type="email"  placeholder=" jbond07@email.com" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></label>
 
-          <label>Password: <input type="password" required placeholder=" **********"> </label>
+          <label for="pass">Password: <input type="password"  placeholder=" **********" id="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required> </label>
         </fieldset>
 
-        <fieldset></fieldset>
+        <fieldset>
+          <!--
+        Setting the same name attribute value for two different radio inputs ensures that only one of them can be
+        selected at a time. This creates a group of mutually exclusive options, where selecting one radio button
+        automatically deselects any other in the group. The browser enforces this rule because the name attribute
+        groups the radio buttons together, meaning only one option within that group can be active at a time.
+        -->
+
+        </fieldset>
+
         <fieldset></fieldset>
         <fieldset></fieldset>
 
