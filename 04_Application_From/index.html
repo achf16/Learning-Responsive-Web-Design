@@ -36,11 +36,26 @@
                                                     required>
           </label>
 
-          <label for="lastName">Last Name: <input type="text"  placeholder=" Bond "   id="lastName" pattern="^[A-Z]+([ '-][A-Za-z]+)*$" required></label>
+          <label for="lastName">Last Name: <input type="text"
+                                                  placeholder=" Bond "
+                                                  id="lastName"
+                                                  pattern="^[A-Z]+([ '-][A-Za-z]+)*$"
+                                                  required>
+          </label>
 
-          <label for="email">Email: <input type="email"  placeholder=" jbond07@email.com" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></label>
+          <label for="email">Email: <input type="email"
+                                           placeholder=" jbond07@email.com"
+                                           id="email"
+                                           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                           required>
+          </label>
 
-          <label for="pass">Password: <input type="password"  placeholder=" **********" id="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required> </label>
+          <label for="pass">Password: <input type="password"
+                                             placeholder=" **********"
+                                             id="pass"
+                                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                             required>
+          </label>
         </fieldset>
 
         <fieldset>
@@ -50,11 +65,66 @@
         automatically deselects any other in the group. The browser enforces this rule because the name attribute
         groups the radio buttons together, meaning only one option within that group can be active at a time.
         -->
+          <legend> Account type(required)  </legend>
+          <label for="personal_account">
+            <input id="personal_account" type="radio" name="account-type"  value="personal" checked> Personal
+          </label>
+
+          <label for="business_account">
+            <input id="business_account" type="radio" name="account-type" value="business"> Business
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="profile_photo"> Upload a profile photo
+            <input id="profile_photo" type="file" accept=".jpeg,.png, .jpg">
+          </label>
+
+          <label for="age"> How old are you?
+            <input id="age" type="number" min="18" max="120" required>
+          </label>
+
+          <label for="select_box">
+            How did you hear about us?
+            <select id="select_box">
+              <option value="">(select one)</option>  <!--The options should have a value, otherwise it will submit useless values-->
+              <option value="1">Instagram</option>
+              <option value="2">Youtube</option>
+              <option value="3">Friend</option>
+              <option value="4">Other</option>
+            </select>
+          </label>
+
+          <label for="bio"> Tell us about you:
+            <textarea id="bio" rows="5" cols="40" placeholder="I would like to become a good coder..."></textarea>
+          </label>
 
         </fieldset>
 
-        <fieldset></fieldset>
-        <fieldset></fieldset>
+      <!--
+      The <a> and <link> elements both serve different purposes in HTML:
+
+        <a> (Anchor Element):
+            Used to create hyperlinks.
+            Can link to other pages, sections within a page, email addresses, or files.
+            Commonly includes href attribute for the URL, and the link text is visible to users.
+
+        <link>:
+            Used for linking external resources like stylesheets, icons, and preloading scripts.
+            Placed inside the <head> section.
+            It does not produce visible content on the page.
+
+      In summary, <a> is for navigation, while <link> is for resource linking.
+      -->
+      <label for="terms&conditions">
+        <input id="terms&conditions" type="Checkbox" required>
+            Do you agree with the
+        <a href="https://localhost" target="_self" rel="noopener noreferrer">
+            terms and conditions
+        </a>
+            ?
+      </label>
+
 
 <!--        When you add an <input> element with type="submit" inside a form, it automatically creates a submit button that
         sends the form data to the server. This input element triggers the form submission when clicked.
