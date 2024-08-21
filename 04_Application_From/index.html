@@ -10,6 +10,13 @@
             font size of the parent element.
     2.  rem: Useful for maintaining consistency across the document, like setting a base size for typography and spacing
             that scales uniformly.-->
+<!--
+Other important thing to look after is give a name to every submittable from thing, besides, without it, the data from
+that element won't be included in the submission, making it difficult to process the form data on the server.
+The name attribute is crucial because it allows the browser to send the element’s data as part of the form submission,
+with the name as the key and the input value as the value.
+-->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,6 +39,7 @@
           <label for="firstName">First Name: <input type="text"
                                                     placeholder=" James"
                                                     id="firstName"
+                                                    name="firstName"
                                                     pattern="^[A-Z]+([ '-][A-Za-z]+)*$"
                                                     required>
           </label>
@@ -39,6 +47,7 @@
           <label for="lastName">Last Name: <input type="text"
                                                   placeholder=" Bond "
                                                   id="lastName"
+                                                  name="lastName"
                                                   pattern="^[A-Z]+([ '-][A-Za-z]+)*$"
                                                   required>
           </label>
@@ -46,6 +55,7 @@
           <label for="email">Email: <input type="email"
                                            placeholder=" jbond07@email.com"
                                            id="email"
+                                           name="email"
                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                                            required>
           </label>
@@ -53,6 +63,7 @@
           <label for="pass">Password: <input type="password"
                                              placeholder=" **********"
                                              id="pass"
+                                             name="pass"
                                              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                                              required>
           </label>
@@ -66,27 +77,45 @@
         groups the radio buttons together, meaning only one option within that group can be active at a time.
         -->
           <legend> Account type(required)  </legend>
+
           <label for="personal_account">
-            <input id="personal_account" type="radio" name="account-type"  value="personal" checked> Personal
+            <input id="personal_account"
+                   type="radio"
+                   name="account-type"
+                   value="personal"
+                   checked>
+            Personal
           </label>
 
           <label for="business_account">
-            <input id="business_account" type="radio" name="account-type" value="business"> Business
+            <input id="business_account"
+                   type="radio"
+                   name="account-type"
+                   value="business">
+            Business
           </label>
         </fieldset>
 
         <fieldset>
           <label for="profile_photo"> Upload a profile photo
-            <input id="profile_photo" type="file" accept=".jpeg,.png, .jpg">
+            <input id="profile_photo"
+                   name="profile_photo"
+                   type="file"
+                   accept=".jpeg,.png,.jpg">
           </label>
 
           <label for="age"> How old are you?
-            <input id="age" type="number" min="18" max="120" required>
+            <input id="age"
+                   name="age"
+                   type="number"
+                   min="18"
+                   max="120"
+                   required>
           </label>
 
           <label for="select_box">
             How did you hear about us?
-            <select id="select_box">
+            <select id="select_box" name="select_box">
               <option value="">(select one)</option>  <!--The options should have a value, otherwise it will submit useless values-->
               <option value="1">Instagram</option>
               <option value="2">Youtube</option>
@@ -95,43 +124,47 @@
             </select>
           </label>
 
+          <!-- TODO: to try the text below stays at the same level of the text area -->
           <label for="bio"> Tell us about you:
-            <textarea id="bio" rows="5" cols="40" placeholder="I would like to become a good coder..."></textarea>
+            <textarea id="bio"
+                      name="bio"
+                      rows="5"
+                      cols="40"
+                      placeholder="I would like to become a good coder..."></textarea>
           </label>
-
         </fieldset>
 
-      <!--
-      The <a> and <link> elements both serve different purposes in HTML:
+        <!--
+        The <a> and <link> elements both serve different purposes in HTML:
 
-        <a> (Anchor Element):
-            Used to create hyperlinks.
-            Can link to other pages, sections within a page, email addresses, or files.
-            Commonly includes href attribute for the URL, and the link text is visible to users.
+          <a> (Anchor Element):
+              Used to create hyperlinks.
+              Can link to other pages, sections within a page, email addresses, or files.
+              Commonly includes href attribute for the URL, and the link text is visible to users.
 
-        <link>:
-            Used for linking external resources like stylesheets, icons, and preloading scripts.
-            Placed inside the <head> section.
-            It does not produce visible content on the page.
+          <link>:
+              Used for linking external resources like stylesheets, icons, and preloading scripts.
+              Placed inside the <head> section.
+              It does not produce visible content on the page.
 
-      In summary, <a> is for navigation, while <link> is for resource linking.
-      -->
-      <label for="terms&conditions">
-        <input id="terms&conditions" type="Checkbox" required>
-            Do you agree with the
-        <a href="https://localhost" target="_self" rel="noopener noreferrer">
-            terms and conditions
-        </a>
-            ?
-      </label>
+        In summary, <a> is for navigation, while <link> is for resource linking.
+        -->
+        <label for="terms&conditions">
+          <input id="terms&conditions"
+                 name="terms&conditions"
+                 type="Checkbox"
+                 required>
+          Do you agree with the
+          <a href="https://localhost" target="_self" rel="noopener noreferrer">terms and conditions</a>
+          ?
+        </label>
 
 
-<!--        When you add an <input> element with type="submit" inside a form, it automatically creates a submit button that
-        sends the form data to the server. This input element triggers the form submission when clicked.
-        To handle the form submission, you place this submit button (the <input> with type="submit") after your last
-        <fieldset> element. The value attribute of this input defines the text displayed on the button (e.g., "Submit", "Send"). -->
-        <input type="submit" value="Send">
-
+          <!--When you add an <input> element with type="submit" inside a form, it automatically creates a submit button that
+          sends the form data to the server. This input element triggers the form submission when clicked.
+          To handle the form submission, you place this submit button (the <input> with type="submit") after your last
+          <fieldset> element. The value attribute of this input defines the text displayed on the button (e.g., "Submit", "Send"). -->
+        <input id="submit_button" name="submit_button" type="submit" value="Send">
       </form>
     </main>
 

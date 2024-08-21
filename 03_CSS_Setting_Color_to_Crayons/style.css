@@ -18,16 +18,16 @@ h1{
 
 .two{
     background: linear-gradient(180deg,rgb(64,27,100) , rgb(150,23,245), rgb(40,45,89));
-    /* The color stops after each color parameter in the linear-gradient property of background sometimes isn't necesary
-    because the funtion liner-gradient automatically calculates these values for you, and places colors evenly along the 
+    /* The color stops after each color parameter in the linear-gradient property of background sometimes isn't necessary
+    because the function liner-gradient automatically calculates these values for you, and places colors evenly along the
     gradient line by default
-    Is unnecesary to put 180deg of gradient direction. This parameter could be omitted if the direction angle is 180*/
+    Is unnecessary to put 180deg of gradient direction. This parameter could be omitted if the direction angle is 180*/
     box-shadow: 0 0 20px 0 rgba(84, 0, 84, 0.8);
 }
 
 .three{
     background: linear-gradient(180deg,#007575 0%,hsl(75,100%,75%) 50%, green 100%);    /* For the use of the linear-gradient is important to change the property background-color
-                                        for background, because the linear-gradient is readed by the PC like a photo.
+                                        for background, because the linear-gradient is read by the PC like a photo.
                                         Basic syntax: linear-gradient(gradientDirection, color1, color2, ...); 
                                         --The values in px or % after a color represent the length that follow a color in 
                                             the linear-gradient function and they are named Color-stops*/  

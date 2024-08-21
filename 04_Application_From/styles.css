@@ -9,6 +9,8 @@ body{
         - 100vh equals the full height of the viewport.*/
     background-color: #34414E;  /* background color of the element*/
     color: #a68f79; /*  Color text and text decorations*/
+    font-family: Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 label{
@@ -18,4 +20,22 @@ label{
 
 a{
     color: #79A5A5;
+}
+
+h1,p{
+    text-align: center;
+    margin: 1em auto;
+}
+
+form{
+    margin: 0 auto;
+    max-width: 550px;
+    min-width: 350px;
+    width: 65vw;
+}
+
+fieldset{
+    border: none;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #a68f79;   /*TODO: find the different color notation in the las project*/
 }
