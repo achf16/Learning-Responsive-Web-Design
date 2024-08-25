@@ -32,10 +32,56 @@ form{
     max-width: 550px;
     min-width: 350px;
     width: 65vw;
+    padding-bottom: 2em;
 }
 
 fieldset{
     border: none;
     padding: 1.5rem 0;
-    border-bottom: 2px solid #a68f79;   /*TODO: find the different color notation in the las project*/
+    border-bottom: 2px solid #a68f79;
+}
+
+input, textarea, select{
+    width: 100%;
+    margin: 12px 0 0 0;
+    min-height: 2em;
+}
+
+.inline_input{
+    width: unset;
+    margin: 0 1em 0 0;
+    vertical-align: middle;
+}
+input, textarea{
+    background-color: #79A5A5;
+    color: #34414E;
+    border: 2px solid #79A5A5;
+}
+
+fieldset:last-of-type{
+    border-bottom: none;
+}
+
+/*TODO: change the radio button color for any analogous in the used palette*/
+input[name="submit_button"]{
+    display: block;
+    background-color: #A58F79;
+    border: 2px solid #A58F79;
+    width: 65%;
+    min-width: 320px;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+}
+
+label[for="terms&conditions"]{
+    text-align: center;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+input[name="account-type"]{
+    color: #e5b400;
 }

@@ -83,6 +83,7 @@ with the name as the key and the input value as the value.
                    type="radio"
                    name="account-type"
                    value="personal"
+                   class="inline_input"
                    checked>
             Personal
           </label>
@@ -91,6 +92,7 @@ with the name as the key and the input value as the value.
             <input id="business_account"
                    type="radio"
                    name="account-type"
+                   class="inline_input"
                    value="business">
             Business
           </label>
@@ -124,7 +126,6 @@ with the name as the key and the input value as the value.
             </select>
           </label>
 
-          <!-- TODO: to try the text below stays at the same level of the text area -->
           <label for="bio"> Tell us about you:
             <textarea id="bio"
                       name="bio"
@@ -150,7 +151,7 @@ with the name as the key and the input value as the value.
         In summary, <a> is for navigation, while <link> is for resource linking.
         -->
         <label for="terms&conditions">
-          <input id="terms&conditions"
+          <input class="inline_input" id="terms&conditions"
                  name="terms&conditions"
                  type="Checkbox"
                  required>
