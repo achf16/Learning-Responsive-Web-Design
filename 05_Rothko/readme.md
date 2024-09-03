@@ -1,1 +1,1 @@
-![Rothko Painting]()
+![Rothko Painting](https://github.com/achf16/Learning-Responsive-Web-Design/blob/2451317c049a900fa8e0cb1f271e9a82cbc8dd02/05_Rothko/media/Rothko_Painting.png?raw=true)
