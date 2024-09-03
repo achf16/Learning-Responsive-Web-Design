@@ -27,13 +27,20 @@
                            final height and width of the .canvas will be CanvasSize + 2*MarginWidth, and that isn't what we
                            want. There's an other way, is using the overflow attribute.The overflow CSS property controls
                            what happens to content that is too large to fit into an element's box. */
+    box-shadow: 0 0  5px 5px #FFD54C;
+    border-radius: 15px;
+    transform: rotate(-0.5deg); /*The transform CSS property allows you to modify the coordinate space of an element,
+                                  enabling various effects such as rotating, scaling, translating, or skewing elements. */
 }
 
 .second{
     width: 325px;
-    height: 200px;
-    margin: 0 auto 20px auto;
+    height: 190px;
+    margin: 0 auto 25px auto;
     background-color: #CFFF4C;
+    box-shadow: 0 0 5px 5px #CFFF4C;
+    border-radius: 50px 25px;
+    transform: rotate(0.4deg);
 }
 
 .third{
@@ -41,4 +48,12 @@
     height: 22%;
     margin: 0 auto;
     background-color: #99D100;
+    filter: blur(5px);
+    box-shadow: 0 0  5px 5px #99D100;
+    border-radius: 15px 25px 35px 45px;
+    transform: rotate(0.3deg);
+}
+
+.one, .two{
+    filter: blur(8px);
 }
