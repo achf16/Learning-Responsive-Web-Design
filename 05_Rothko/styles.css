@@ -1,0 +1,44 @@
+.canvas{
+    background-color: coral;
+    width: 350px;
+    height: 550px;
+    overflow: hidden;   /* overflow: hidden;: Any overflow content That exceeds the element's defined area is clipped,
+                            preventing scrollbars from appearing.*/
+    filter: blur(2px);  /*The filter property in CSS allows you to apply graphical effects like blurring, sharpening,
+                           or changing the color of elements (such as images or backgrounds). It can be used to adjust
+                           the appearance of an element without altering the underlying content.*/
+}
+
+.frame{
+    width: 350px;
+    border: 55px solid black;
+    padding: 55px;
+    margin: 55px auto;
+}
+
+.first{
+    background-color: #FFD54C;
+    height: 150px;
+    width: 300px;
+    margin: 25px auto;  /*If I set this margin without put a boundary in .canvas like the border, then this margin will
+                          add more padding between .canvas and .frame. This happens because the margin of .one pushes
+                          outwards, affecting the layout of parent containers. To resolve this, you should add a
+                          solid boundary(margin) to .canvas where .first's margin will to push off of but, doing this the
+                           final height and width of the .canvas will be CanvasSize + 2*MarginWidth, and that isn't what we
+                           want. There's an other way, is using the overflow attribute.The overflow CSS property controls
+                           what happens to content that is too large to fit into an element's box. */
+}
+
+.second{
+    width: 325px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+    background-color: #CFFF4C;
+}
+
+.third{
+    width: 91%;
+    height: 22%;
+    margin: 0 auto;
+    background-color: #99D100;
+}
