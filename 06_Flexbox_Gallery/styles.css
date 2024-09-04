@@ -1,0 +1,7 @@
+/*  Important Knowledge:
+The box-sizing property in CSS determines how the width and height of an element are calculated. There are two main values:
+    - content-box (default): The width and height properties only include the content. Padding, borders, and margins
+                             are added outside these dimensions.
+    - border-box: The width and height properties include the content, padding, and borders. This makes it easier to
+                  size elements consistently, as you don’t need to add extra width for padding or borders.
+*/
