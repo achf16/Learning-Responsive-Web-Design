@@ -58,6 +58,7 @@ input, textarea{
     border: 2px solid #79A5A5;
 }
 
+/*TODO: explain the use of the : rather than ::*/
 fieldset:last-of-type{
     border-bottom: none;
 }
