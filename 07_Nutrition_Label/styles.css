@@ -1,0 +1,84 @@
+/*  Knowledge:
+    @   The <span> element in HTML is an inline container used to group or apply styles to a section of text or elements
+         without affecting the layout. It's often used with CSS or JavaScript to style specific parts of text within a
+         block-level element (like <p>) without breaking the flow of the document.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;    /*Setting the font root size*/
+}
+
+body{
+    font-family: "Open Sans", sans-serif;   /* The principal font is the one between "" and the other the fallback*/
+}
+
+.facts_label{
+    border: 2px solid black;
+    width: 270px;
+    padding: 0 7px;
+    margin: 20px auto;
+}
+
+header h1{  /* "header h1" target only the h1 of the header element*/
+    margin: -4px 0;
+    text-align: center;
+    letter-spacing: 0.15px;
+}
+
+p{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontal_divider{
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+
+.bold{
+    font-weight: 800;   /* This will become the font more bold*/
+}
+
+.gross{
+    height: 10px;
+}
+
+.gross, .medium_divider{
+    background-color: black;
+    border: 0;
+}
+
+.small-text{
+    font-size: 0.85rem;
+}
+
+.calories_information h2{
+    margin: 0;
+}
+
+.calories_information{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.left_information p{
+    margin: -5px -2px;
+    font-size: 2em;
+    font-weight: 700;
+}
+.calories_information span{
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: -7px -2px;
+}
+
+.medium_divider{
+    height: 5px;
+}
