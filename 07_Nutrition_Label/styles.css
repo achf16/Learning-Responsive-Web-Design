@@ -97,3 +97,14 @@ p{
 .daily_value p:not(.exclude){
     border-bottom: 1px solid #888989;
 }
+
+.indent_double{
+    margin-left: 2em;
+}
+
+.bottom_note{
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
+}
