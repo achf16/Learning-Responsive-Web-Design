@@ -18,13 +18,10 @@ body {
 
 }
 
-/*TODO: it's necessary the logo sizing and position correction*/
-/*TODO: correctly positioning the h1 header*/
 #logo{
         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
         width: max(10rem, 16vw);
-        margin: 5px 0 0 20px;
-        padding: 13px 0 0 13px; /*TODO: make the padding adjustable based on the rem to preserve the aspect */
+        padding: 0.2rem;
         aspect-ratio: 1.1/1;
         object-fit: contain;
 }
@@ -33,14 +30,26 @@ body {
 h1{
         text-transform: uppercase;
         color: #0E4B2D;
-        font-size: min(5vw,1.3em);
+        font-size: min(5vw,1.2em);
 
 }
 
 header{
-        height: 3.8rem;
-        background-color: #F4FAFB;
-        border-bottom: #1A376D solid 2.34rem;
-        display: flex;
+        height: 70px;
         width: 100%;
+        background-color: #F4FAFB;
+        border-bottom: #1A376D solid 0.5rem;
+        display: flex;
+
+}
+
+nav {
+        width: 50%;
+        max-width: 300px;
+        height: 70px;
+}
+
+nav > ul{
+        display: flex;
+        justify-content: space-evenly;
 }
