@@ -1,0 +1,46 @@
+/*TO KNOW
+@       CSS has a max function which returns the largest of a set of comma-separated values.
+        For example:
+                img { width: max(250px, 25vw); }
+        In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels.
+        If the viewport width is greater than 1000 pixels, the width of the image will be 25vw. This is because 25vw is
+        equal to 25% of the viewport width.
+
+@       The child combinator selector (>) in CSS targets only direct children of a specified parent element. This means
+        it selects elements that are immediate descendants of another element, and not those nested deeper inside other
+        elements.
+*/
+
+body {
+        background: #6D501A;
+        font-family: Brush Scrip, "serif";
+        margin: 0;
+
+}
+
+/*TODO: it's necessary the logo sizing and position correction*/
+/*TODO: correctly positioning the h1 header*/
+#logo{
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        width: max(10rem, 16vw);
+        margin: 5px 0 0 20px;
+        padding: 13px 0 0 13px; /*TODO: make the padding adjustable based on the rem to preserve the aspect */
+        aspect-ratio: 1.1/1;
+        object-fit: contain;
+}
+
+
+h1{
+        text-transform: uppercase;
+        color: #0E4B2D;
+        font-size: min(5vw,1.3em);
+
+}
+
+header{
+        height: 3.8rem;
+        background-color: #F4FAFB;
+        border-bottom: #1A376D solid 2.34rem;
+        display: flex;
+        width: 100%;
+}
