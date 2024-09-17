@@ -5,10 +5,15 @@
     engine optimization (SEO) and increase click-through rates.
 @   The <nav> element in HTML is a semantic tag that defines a section of a webpage intended for navigation links.
     This element is used to group links that guide users through the site or app, such as primary menus, secondary
-    links, or pagination.-->
+    links, or pagination.
+@   The role attribute can be used to indicate the purpose behind an element on the page to assistive technologies.
+    The role attribute is a part of the Web Accessibility Initiative (WAI). This attribute doesn't affect the visual
+    appearance of a webpage. It is used purely for accessibility and semantic purposes, helping assistive technologies
+    like screen readers better understand the structure and purpose of the elements on the page.-->
 
 <!doctype html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,22 +22,65 @@
         <title>Weekly Quiz</title>
         <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <header>
             <img src="media/logo1.png" alt="school_logo" id="logo">
             <h1>Weekly Quiz</h1>
             <nav>
                 <ul>
-                    <li><a>INFO</a></li>
-                    <li><a>Math</a></li>
-                    <li><a>History</a></li>
+                    <li><a href="#student-info">INFO</a></li>
+                    <li><a href="#math-questions">Math</a></li>
+                    <li><a href="#history-questions">History</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
+            <form action="https://localhost" method="post" enctype="multipart/form-data">
+                <!--The role="region" attribute is used in HTML to indicate that a specific part of a webpage is an
+                    important section or region.-->
+                <section role="region" aria-labelledby="student-info">
+                    <h2 id="student-info">Student INFO</h2>
 
+                    <div class="info_student">
+                        <label for="name">Name:</label>
+                        <input id="name" name="Name" type="text">
+                    </div>
+
+                    <div class="info_student">
+                        <label for="email">Email Address:</label>
+                        <input id="email" name="Email" type="email">
+                    </div>
+
+                    <div class="info_student">
+                        <label for="birth-date">Date of Birth:</label>
+                        <input id="birth-date" name="Birth-Date" type="date">
+                    </div>
+                </section>
+
+                <section role="region" aria-labelledby="math-questions">
+                    <h2 id="math-questions">Math Questions</h2>
+
+                    <!--TODO: to style .screenReader-only-->
+                    <div class="question-block">
+                        <!--One way to add information for visually impaired people because the numbers maybe aren't
+                            descriptive enough, is adding text only readable for screen readers.
+                            A way for that is adding styles span text to each h3-->
+                        <h3>1<span class="screenReader-only">Question</span></h3>
+                        <fieldset class="question"></fieldset>
+                    </div>
+
+                    <div class="question-block">
+                        <h3>2 <span class="screenReader-only">Question</span></h3>
+                        <fieldset class="question"></fieldset>
+                    </div>
+                </section>
+
+                <section role="region" aria-labelledby="history-questions">
+                    <h2 id="history-questions">History Questions</h2>
+                </section>
+            </form>
         </main>
-
     </body>
 </html>
