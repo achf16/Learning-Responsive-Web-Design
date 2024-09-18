@@ -25,6 +25,7 @@ body {
         padding: 0.2rem;
         aspect-ratio: 1.1/1;
         object-fit: contain;
+        /*position: fixed;*/
 }
 
 
@@ -41,7 +42,9 @@ header{
         background-color: #F4FAFB;
         border-bottom: #1A376D solid 0.5rem;
         display: flex;
-
+/*        position: fixed;      TODO: make a floating header or a fixed overflow scroll questionary for preserve
+                                      a visible header all the time no matter what's the screen size
+        top: 0;*/
 }
 
 nav {
@@ -62,3 +65,30 @@ h1,h2{
 h2{
         border-bottom: 4px solid #EBD5AD;
 }
+
+.screenReader-only {
+        /* Elements that are relatively positioned remain in the normal flow of the document. In contrast, an element
+        that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not
+        exist. The absolutely positioned element is positioned relative to its nearest positioned ancestor (i.e., the
+        nearest ancestor that is not static). If a positioned ancestor doesn't exist, it is positioned relative to the
+         ICB (initial containing block)*/
+        position: absolute;     /*This was used for set the text out of the content and positioned it */
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+
+        /*The overflow CSS shorthand property sets the desired behavior when content does not fit in the element's
+        padding box (overflows) in the horizontal and/or vertical direction.*/
+        overflow: hidden;
+
+        /*The clip CSS property defines a visible portion of an element.*/
+        clip: rect(0,0,0,0); /* The clip property applies only to absolutely positioned elements — that is,
+                                   elements with position:absolute   or position:fixed*/
+
+        /*The white-space CSS property sets how white space inside an element is handled.*/
+        white-space: nowrap;
+        border: 0;
+}
+
+
