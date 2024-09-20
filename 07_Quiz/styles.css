@@ -11,6 +11,10 @@
         elements.
 */
 
+*{
+        border: 1px solid green;
+}
+
 body {
         background: #6D501A;
         color: #F4FAFB;
@@ -25,9 +29,9 @@ body {
         padding: 0.2rem;
         aspect-ratio: 1.1/1;
         object-fit: contain;
+        /*margin-top: 50px;*/
         /*position: fixed;*/
 }
-
 
 h1{
         text-transform: uppercase;
@@ -45,6 +49,8 @@ header{
 /*        position: fixed;      TODO: make a floating header or a fixed overflow scroll questionary for preserve
                                       a visible header all the time no matter what's the screen size
         top: 0;*/
+        justify-content: space-between;
+        align-items: center;
 }
 
 nav {
@@ -91,4 +97,32 @@ h2{
         border: 0;
 }
 
+/*In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add
+cosmetic content to an element with the content property. It is inline by default.*/
+h3::before{
+        content: 'Question #';  /*The content CSS property replaces content with a generated value.*/
+}
 
+#submit_button{
+        margin-bottom: 1rem;
+}
+
+nav > ul > li{
+        color: #1A376D;
+        margin: 0 0.2rem;
+        padding: 0.2rem;
+        display: block; /*Without this the menu will still in a row but with dot behind, this property is for removes those.*/
+}
+
+li > a{
+        color: inherit;
+        text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+        background-color: #6D501A;
+        color: #F4FAFB;
+        padding: 3px;
+        /*font-weight: bold;*/
+        cursor: pointer;
+}

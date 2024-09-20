@@ -9,7 +9,11 @@
 @   The role attribute can be used to indicate the purpose behind an element on the page to assistive technologies.
     The role attribute is a part of the Web Accessibility Initiative (WAI). This attribute doesn't affect the visual
     appearance of a webpage. It is used purely for accessibility and semantic purposes, helping assistive technologies
-    like screen readers better understand the structure and purpose of the elements on the page.-->
+    like screen readers better understand the structure and purpose of the elements on the page.
+@   To escape browser interpret <> like tag you should use:
+        &lt; represents <
+        &gt; represents >
+        -->
 
 <!doctype html>
 <html lang="en">
@@ -61,27 +65,106 @@
 
                 <section role="region" aria-labelledby="math-questions">
                     <h2 id="math-questions">Math Questions</h2>
-
-                    <!--TODO: to style .screenReader-only-->
                     <div class="question-block">
                         <!--One way to add information for visually impaired people because the numbers maybe aren't
                             descriptive enough, is adding text only readable for screen readers.
                             A way for that is adding styles span text to each h3-->
                         <h3><span class="screenReader-only">Question</span>1</h3>
-                        <fieldset class="question"></fieldset>
+                        <fieldset class="question" name="Math-questions-one">
+                            <legend>The square root of 49 is 7</legend>
+                            <ul name="answers-list">
+                                <li>
+                                    <label for="q1-a1">
+                                        <input type="radio" id="q1-a1" value="True" name="q1">
+                                        True
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="q1-a2">
+                                        <input type="radio" id="q1-a2" value="False" name="q1">
+                                        False
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
                     </div>
 
                     <div class="question-block">
                         <h3><span class="screenReader-only">Question</span>2</h3>
-                        <fieldset class="question"></fieldset>
+                        <fieldset class="question" name="Math-questions-two">
+                            <legend>
+                                In a right triangle, the sum of the two smaller angles is always 180 degrees
+                            </legend>
+                            <ul name="answers-list">
+                                <li>
+                                    <label for="q2-a1">
+                                        <input type="radio" id="q2-a1" value="True" name="q2">
+                                        True
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="q2-a2">
+                                        <input type="radio" id="q2-a2" value="False" name="q2">
+                                        False
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
                     </div>
                 </section>
 
                 <section role="region" aria-labelledby="history-questions">
                     <h2 id="history-questions">History Questions</h2>
-                </section>
-            </form>
+                    <div class="form-row">  <!--TODO: understand why "formrow"-->
+                        <div class="question">
+                            <label for="select-answers">What year did the Berlin Wall fall?</label>
+                        </div>
+                        <div class="answer">
+                                <select id="select-answers"  name="Select-Answers" required>
+                                    <option value="">Select an option</option>
+                                    <option value="good">1989</option>
+                                    <option value="bad">1979</option>
+                                    <option value="bad">1972</option>
+                                    <option value="bad">1982</option>
+                                </select>
+                        </div>
 
+                        <div class="question">
+                            <label for="history-text-area">Who was the leader of the Soviet Union during World War II?</label>
+                        </div>
+                        <div class="answer">
+                            <textarea cols="24" rows="5" id="history-text-area" name="History-Text-Area"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <button type="submit" id="submit_button">Send</button>
+            </form>
         </main>
+
+        <!--The <footer> element is used to define the footer of a document or section. It typically contains metadata
+            or navigational elements, such as copyright information, links to related documents, or contact details.
+            It can be placed within the <body> of a document and within individual sections or articles to provide
+            context-specific footers.
+        -->
+        <footer>
+
+            <!--The <address> element is used to provide contact information, usually for the author or owner of the
+    document. It can include names, URLs, physical addresses, or emails. It's often found within a footer but
+    can be used elsewhere too.
+-->
+            <address>
+                <a href="https://localhost">NHC High School</a><br>
+                San Francisco<br>
+                California<br>
+                USA
+            </address>
+        </footer>
+
+
+
+
     </body>
 </html>
