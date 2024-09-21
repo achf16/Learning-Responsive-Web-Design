@@ -33,9 +33,9 @@
             <h1>Weekly Quiz</h1>
             <nav>
                 <ul>
-                    <li><a href="#student-info">INFO</a></li>
-                    <li><a href="#math-questions">Math</a></li>
-                    <li><a href="#history-questions">History</a></li>
+                    <li><a href="#student-info" accesskey="i"><b>I</b>NFO</a></li>
+                    <li><a href="#math-questions" accesskey="m"><b>M</b>ath</a></li>
+                    <li><a href="#history-questions" accesskey="h"><b>H</b>istory</a></li>
                 </ul>
             </nav>
         </header>
@@ -72,7 +72,7 @@
                         <h3><span class="screenReader-only">Question</span>1</h3>
                         <fieldset class="question" name="Math-questions-one">
                             <legend>The square root of 49 is 7</legend>
-                            <ul name="answers-list">
+                            <ul class="answers-list">
                                 <li>
                                     <label for="q1-a1">
                                         <input type="radio" id="q1-a1" value="True" name="q1">
@@ -96,7 +96,7 @@
                             <legend>
                                 In a right triangle, the sum of the two smaller angles is always 180 degrees
                             </legend>
-                            <ul name="answers-list">
+                            <ul class="answers-list">
                                 <li>
                                     <label for="q2-a1">
                                         <input type="radio" id="q2-a1" value="True" name="q2">
@@ -117,8 +117,8 @@
 
                 <section role="region" aria-labelledby="history-questions">
                     <h2 id="history-questions">History Questions</h2>
-                    <div class="form-row">  <!--TODO: understand why "formrow"-->
-                        <div class="question">
+                    <div class="form-row">
+                        <div class="question-block">
                             <label for="select-answers">What year did the Berlin Wall fall?</label>
                         </div>
                         <div class="answer">
@@ -131,7 +131,7 @@
                                 </select>
                         </div>
 
-                        <div class="question">
+                        <div class="question-block">
                             <label for="history-text-area">Who was the leader of the Soviet Union during World War II?</label>
                         </div>
                         <div class="answer">
@@ -150,7 +150,6 @@
             context-specific footers.
         -->
         <footer>
-
             <!--The <address> element is used to provide contact information, usually for the author or owner of the
     document. It can include names, URLs, physical addresses, or emails. It's often found within a footer but
     can be used elsewhere too.
@@ -162,9 +161,5 @@
                 USA
             </address>
         </footer>
-
-
-
-
     </body>
 </html>

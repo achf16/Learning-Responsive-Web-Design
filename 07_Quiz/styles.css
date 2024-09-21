@@ -9,11 +9,32 @@
 @       The child combinator selector (>) in CSS targets only direct children of a specified parent element. This means
         it selects elements that are immediate descendants of another element, and not those nested deeper inside other
         elements.
+@       The @media rule in CSS is used to apply styles based on the characteristics of the device or viewport, such as
+        width, height, resolution, and orientation. It's commonly used for creating responsive designs that adapt to
+        different screen sizes.
+        @media (feature: value) {
+                selector {
+                                styles
+                         }
+        }
+
 */
 
-*{
+/**{
         border: 1px solid green;
+}*/
+
+@media (prefers-reduced-motion: no-preference) {
+        *{
+                /*The scroll-behavior CSS property sets the behavior for a scrolling box when scrolling is triggered by the
+                  navigation or CSSOM scrolling APIs.*/
+                scroll-behavior: smooth;
+        }
 }
+
+
+/*TODO: make navigation text menu auto adjust its text size, because in small screen the History button doesn't appear entire */
+/*TODO. make the header element less separate*/
 
 body {
         background: #6D501A;
@@ -23,9 +44,15 @@ body {
 
 }
 
+b{
+        font-weight: bold;
+        text-decoration: underline;
+}
+
 #logo{
         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
         width: max(10rem, 16vw);
+        max-height: 100%;
         padding: 0.2rem;
         aspect-ratio: 1.1/1;
         object-fit: contain;
@@ -37,7 +64,7 @@ h1{
         text-transform: uppercase;
         color: #0E4B2D;
         font-size: min(5vw,1.2em);
-
+        text-align: center;
 }
 
 header{
@@ -46,11 +73,12 @@ header{
         background-color: #F4FAFB;
         border-bottom: #1A376D solid 0.5rem;
         display: flex;
-/*        position: fixed;      TODO: make a floating header or a fixed overflow scroll questionary for preserve
-                                      a visible header all the time no matter what's the screen size
-        top: 0;*/
-        justify-content: space-between;
+        position: fixed;      /*TODO: make a floating header or a fixed overflow scroll questionary for preserve
+                                      a visible header all the time no matter what's the screen size*/
+        top: 0;
+        justify-content: space-around;
         align-items: center;
+        /*max-width: 970px;*/
 }
 
 nav {
@@ -62,6 +90,14 @@ nav {
 nav > ul{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-inline-start: 0;
+        margin-block: 0;        /*This established the margin of the block depending of the write direction,
+                                if it's horizontal this property set the margin top and bottom. For the vertical
+                                write direction sets the top-bottom too, but because the element is vertical the top
+                                side is the right and the bottom the right*/
+        height: 100%;
 }
 
 h1,h2{
@@ -70,6 +106,8 @@ h1,h2{
 
 h2{
         border-bottom: 4px solid #EBD5AD;
+        margin-top: 0;
+        padding-top: 60px;
 }
 
 .screenReader-only {
@@ -126,3 +164,104 @@ nav > ul > li > a:hover{
         /*font-weight: bold;*/
         cursor: pointer;
 }
+
+main{
+        padding-top: 70px;
+}
+
+section{
+        max-width: 600px;
+        width: 61.8%;
+        margin: 0 auto 10px auto;
+}
+
+.info_student{
+        padding: 0.618rem 0 0 1rem;
+}
+
+.form-row{
+        margin-top: 30px;
+        padding: 0 1rem;
+}
+
+input{
+        font-size: 16px;
+}
+
+.info_student input{
+        width: 50%;
+        text-align: left;
+}
+
+.info label{
+        width: 10%;
+        min-width: 60px;
+        text-align: right;
+}
+
+.info_student label, .info_student input{
+        display: inline-block;
+}
+
+.question-block{
+        text-align: left;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 5px;
+}
+
+h3{
+        margin-top: 5px;
+        padding-left: 15px;
+        font-size: 22px;
+}
+
+.question{
+        border:0;
+        padding-bottom: 0;
+}
+
+.answers-list{
+        list-style: none;
+        padding: 0;
+}
+
+button{
+        display: block;
+        margin: 40px auto;
+        width: 38%;
+        padding: 7px;
+        font-size: 23px;
+        background: #CD940A;
+        border: 3px solid #EBD5AD;
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+        border-radius: 10px;
+        color: #EBD5AD;
+        font-family: inherit;
+        font-weight: bold;
+}
+button:hover{
+        background: #EBD5AD;
+        color: #6D501A;
+}
+
+footer{
+        background-color: #F4FAFB;
+        display:flex;
+        justify-content: center;
+        border-top:  solid 0.5rem;
+        padding: 0.3em;
+        text-align: center;
+        margin-top: 40px;
+        font-family: inherit;
+}
+
+footer, footer a{
+        color: #1A376D;
+}
+
+/*
+header *{
+        max-width: 100px;
+}*/
