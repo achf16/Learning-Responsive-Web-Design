@@ -33,9 +33,6 @@
 }
 
 
-/*TODO: make navigation text menu auto adjust its text size, because in small screen the History button doesn't appear entire */
-/*TODO. make the header element less separate*/
-
 body {
         background: #6D501A;
         color: #F4FAFB;
@@ -73,8 +70,7 @@ header{
         background-color: #F4FAFB;
         border-bottom: #1A376D solid 0.5rem;
         display: flex;
-        position: fixed;      /*TODO: make a floating header or a fixed overflow scroll questionary for preserve
-                                      a visible header all the time no matter what's the screen size*/
+        position: fixed;
         top: 0;
         justify-content: space-around;
         align-items: center;
