@@ -39,11 +39,43 @@ header > h1{
 }
 
 #img-div{
- max-width: 97%;
+ max-width: 95%;
  height: auto;
  margin: 0 auto;
  background-color: #FFFFFF;
+ text-align: center;
+ padding:  min(1%, 1vw) min(5%, 5vw);
 }
 
+#tribute-info{
+ max-width: max(35vw, 350px);
+ margin: 3rem auto;
+}
+
+#tribute-info *{
+ margin: 1.5rem 0;
+}
+
+#tribute-info > *{
+ margin-bottom: 2.5rem;
+ padding: 0 1rem 0 1rem;
+}
+
+.bold{
+ font-weight: bold;
+}
+
+.quote{
+ font-style: italic;
+ padding: 0 1rem 0 1rem;
+}
+
+.page_footer{
+ display: block;
+ text-align: center;
+ padding: 1rem 1rem 2.5rem 1rem;
+ font-size: 1.2rem;
+ font-weight: bold;
+}
 
 
