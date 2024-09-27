@@ -1,0 +1,83 @@
+<!--
+@   <caption> element is used to define a title or description for a table. It provides context for the data inside the
+    table. It must be the first child of a <table>.
+
+@   The caption-side CSS property specifies the position of the caption relative to the table. Common values include:
+        top (default): Places the caption above the table.
+        bottom: Places the caption below the table.
+
+-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Balance Sheet</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>
+                    <span class="flex">
+                        <span>MicTechCorp</span>
+                        <span>Balance Sheet</span>
+                    </span>
+                </h1>
+
+                <div id="years" aria-hidden="true">
+                    <!--Setting aria-hidden="true" ensures that the content inside the element is ignored by screen
+                    readers, even though it remains visible on the page.-->
+                    <span class="year">2022</span>
+                    <span class="year">2023</span>
+                    <span class="year">2024</span>
+                </div>
+
+                <div class="table-wrap">
+                    <!--TABLE # 1-->
+                    <table>
+                        <caption>Assets</caption>
+
+                        <thead>
+                            <tr>
+                                <td></td> <!--This element is empty because its exits to ensure the table has 4columns-->
+                                <th><span class="screenReader-only year">2022</span></th>
+                                <th><span class="screenReader-only year"></span>2023</th>
+                                <th class="current"><span class="screenReader-only year">2024</span></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="data">
+                                <th>Cash <span class="description">Currently in-hand money.</span></th>
+                                <td>$40</td>
+                                <td>$45</td>
+                                <td class="current">$43</td>
+                            </tr>
+
+                            <tr class="data">
+                                <th>Checking <span class="description">Primary trans-account.</span></th>
+                                <td>$50</td>
+                                <td>$56</td>
+                                <td class="current">$54</td>
+                            </tr>
+
+                            <tr class="data"></tr>
+
+                            <tr class="total"></tr>
+                        </tbody>
+                    </table>
+
+                    <!--TABLE # 2-->
+                    <table></table>
+
+                    <!--TABLE # 3-->
+                    <table></table>
+
+
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
