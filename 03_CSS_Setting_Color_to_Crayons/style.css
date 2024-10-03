@@ -26,7 +26,8 @@ h1{
 }
 
 .three{
-    background: linear-gradient(180deg,#007575 0%,hsl(75,100%,75%) 50%, green 100%);    /* For the use of the linear-gradient is important to change the property background-color
+    background: linear-gradient(180deg,#007575 0%,hsl(75,100%,75%) 50%, green 100%);    /* For the use of the
+                                        linear-gradient is important to change the property background-color
                                         for background, because the linear-gradient is read by the PC like a photo.
                                         Basic syntax: linear-gradient(gradientDirection, color1, color2, ...); 
                                         --The values in px or % after a color represent the length that follow a color in 
