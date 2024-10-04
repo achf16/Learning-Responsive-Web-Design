@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FCF3C9;
+}
+
+.catHead{
+    width: 207px;
+    border: 1px solid #000;
+    border-radius: 46%;
+    height: 182px;
+    background: linear-gradient(#5E5E5E 85%, #4F4545 100%);
+}
