@@ -2,7 +2,6 @@
     box-sizing: border-box;
     /*border: 1px solid black;*/
 }
-
 body{
     background-color: #FCF3C9;
 }
@@ -31,6 +30,7 @@ body{
     border-top-left-radius: 90px;
     border-top-right-radius: 10px;
     transform: rotate(-45deg);
+    z-index: 1;
 }
 .cat-right-ear{
     border-left: 35px solid transparent;
@@ -42,4 +42,104 @@ body{
     transform: rotate(45deg);
     border-top-left-radius: 90px;
     border-top-right-radius: 10px;
+    z-index: 1;
+}
+
+.cat-left-inner-ear{
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #4F3B3B;
+    top: 22px;
+    left: -20px;
+    border-radius: 90px 10px 40% 40%;
+}
+
+.cat-right-inner-ear{
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #4F3B3B;
+    top: 22px;
+    left: -20px;
+    border-radius: 90px 10px 40% 40%;
+}
+
+.cat-left-eye{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: black;
+    top: 54px;
+    left: 39px;
+    border-radius: 60%;
+    transform: rotate(25deg);
+}
+
+.cat-right-eye{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: black;
+    top: 54px;
+    left: 134px;
+    border-radius: 60%;
+    transform: rotate(-25deg);
+}
+
+.cat-left-inner-eye{
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    border-radius: 60%;
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    transform: rotate(10deg);
+}
+
+.cat-right-inner-eye{
+    width: 10px;
+    height: 20px;
+    background-color: white;
+    border-radius: 60%;
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    transform: rotate(-5deg);
+}
+
+.cat-nose{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #4F3B3B;
+    position: absolute;
+    top: 108px;
+    left: 85px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(180deg);
+}
+
+.cat-mouth div{
+    width: 30px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 190%/190px 150px 0 0;
+    border-color: black transparent transparent transparent;
+}
+
+.cat-mouth-line-left {
+    position: absolute;
+    top: 88px;
+    left: 74px;
+    transform: rotate(170deg);
+}
+
+.cat-mouth-line-right{
+    position: absolute;
+    top: 88px;
+    right: 91px;
+    transform: rotate(165deg);
 }
