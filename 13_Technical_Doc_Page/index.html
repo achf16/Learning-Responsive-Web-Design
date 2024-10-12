@@ -1,29 +1,255 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS Docs</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <main id="main-doc">
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSS Docs</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="left-menu">
+                <h1>CSS Documentation</h1>
+            </div>
+
+        </header>
+        <main id="main-doc">
+            <section class="main-section" id="What_is_CSS">
+                <h2>What is CSS</h2>
+                <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work
+                    under the hood? This article explains what CSS is with a simple syntax example and also covers some
+                    key terms about the language.</p>
+            </section>
+
+            <section class="main-section" id="What_is_CSS_for">
+                <h2>What is CSS for?</h2>
+                <p>CSS can be used for very basic document text styling — for example, for changing the color and size
+                    of headings and links. It can be used to create a layout — for example, turning a single column of
+                    text into a layout with a main content area and a sidebar for related information. It can even be
+                    used for effects such as animation. Have a look at the links in this paragraph for specific
+                    examples.</p>
+            </section>
+
+            <section class="main-section" id="CSS_syntax">
+                <h2>CSS syntax</h2>
+                <p>CSS is a rule-based language — you define the rules by specifying groups of styles that should be
+                    applied to particular elements or groups of elements on your web page.
+                </p>
+                <p>For example, you can decide to have the main heading on your page to be shown as large red text.
+                    The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+
+                <!--TODO: make the code look alike real code-->
+                <!--TODO: give a background color to #212121-->
+                <code>
+                    <span class="purple">h1</span> {
+                    <span class="rose">color</span>: red;
+                    <span class="rose">font-size</span>: 5em;
+                    }
+                </code>
+
+                <ul>
+                    <li>In the above example, the CSS rule opens with a selector.</li>
+                    <li>This selects the HTML element that we are going to style. In this case, we are styling level
+                        one headings (h1).</li>
+                    <li>We then have a set of curly braces { }.</li>
+                    <li>Inside the braces will be one or more declarations, which take the form of property and value
+                        pairs. We specify the property (color in the above example) before the colon, and we specify
+                        the value of the property after the colon (red in this example).</li>
+                    <li>This example contains two declarations, one for color and the other for font-size. Each pair
+                        specifies a property of the element(s) we are selecting (h1 in this case), then a value that
+                        we'd like to give the property.</li>
+                </ul>
+
+                <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
+
+                <code>
+                    <span class="purple">h1</span> {
+                    <span class="rose">color</span>: red;
+                    <span class="rose">font-size</span>: 5em;
+                    }
+
+                    <span class="purple">p</span> {
+                    <span class="rose">color</span>: black;
+                    }
+                </code>
+
+                <p>You will find that you quickly learn some values, whereas others you will need to look up. The
+                    individual property pages on MDN give you a quick way to look up properties and their values when
+                    you forget or when you want to know what else you can use as a value.</p>
+            </section>
+
+            <section class="main-section" id="CSS_modules">
+                <h2>CSS modules</h2>
+                <p>
+                    As there are so many things that you could style using CSS, the language is broken down into
+                    modules. You'll see reference to these modules as you explore MDN. Many of the documentation pages
+                    are organized around a particular module. For example, you could take a look at the MDN reference
+                    to the Backgrounds and Borders module to find out what its purpose is and the properties and
+                    features it contains. In that module, you will also find a link to Specifications that defines the
+                    technology (also see the section below).
+                </p>
+                <p>
+                    At this stage, you don't need to worry too much about how CSS is structured; however, it can make
+                    it easier to find information if, for example, you are aware that a certain property is likely to
+                    be found among other similar things, and is therefore, probably in the same specification.
+                </p>
+                <p>
+                    For a specific example, let's go back to the Backgrounds and Borders module — you might think that
+                    it makes logical sense for the background-color and border-color properties to be defined in this
+                    module. And you'd be right.
+                </p>
+            </section>
+
+            <section class="main-section" id="CSS_specifications">
+                <h2>CSS specifications</h2>
+                <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called
+                    specifications (or "specs"), which are published by standards organizations (such as the W3C,
+                    WHATWG, ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
+
+                <p>CSS is no different — it is developed by a group within the W3C called the CSS Working Group. This
+                    group is made of representatives of browser vendors and other companies who have an interest in CSS.
+                    There are other people, known as invited experts, who act as independent voices; they are not
+                    linked to a member organization.</p>
+
+                <p>New CSS features are developed or specified by the CSS Working Group — sometimes because a particular
+                    browser is interested in having some capability, other times because web designers and developers
+                    are asking for a feature, and sometimes because the Working Group itself has identified a
+                    requirement. CSS is constantly developing, with new features becoming available. However, a key
+                    thing about CSS is that everyone works very hard to never change things in a way that would break
+                    old websites. A website built in 2000, using the limited CSS available then, should still be usable
+                    in a browser today!</p>
+
+                <p>As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming — they are intended
+                    for engineers to use to implement support for the features in user agents, not for web developers to
+                    read to understand CSS. Many experienced developers would much rather refer to MDN documentation or
+                    other tutorials. Nevertheless, it is worth knowing that these specs exist and understanding the
+                    relationship between the CSS you are using, the browser support (see below), and the specs.</p>
+
+            </section>
+
+            <section class="main-section" id="External stylesheet">
+                <h2>External stylesheet</h2>
+                <p>An external stylesheet contains CSS in a separate file with a .css extension. This is the most
+                    common and useful method of bringing CSS to a document. You can link a single CSS file to multiple
+                    web pages, styling all of them with the same CSS stylesheet. In the Getting started with CSS, we
+                    linked an external stylesheet to our web page.
+                </p>
+
+                <p> You reference an external CSS stylesheet from an HTML &lt;link&gt; element:</p>
+                <code>
+                    &lt;!doctype html&gt;
+                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                    &lt;<span class="green">head</span>&gt;
+                        &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
+                        &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
+                        &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles.css</span>"/&gt;
+                    &lt;/<span class="green">head</span>&gt;
+                    &lt;<span class="green">body</span>&gt;
+                    &lt;<span class="green">h1</span>&gt;Hello World!&lt;/<span class="green">h1</span>&gt;
+                    &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                    &lt;/<span class="green">body</span>&gt;
+                    &lt;/<span class="green">html</span>&gt;
+                </code>
+
+                <p>The CSS stylesheet file might look like this:</p>
+
+                <code>
+                    <span class="purple">h1</span> {
+                    <span class="rose">color</span>: blue;
+                    <span class="rose">background-color</span>: yellow;
+                    <span class="rose">border</span>: 1px solid black;
+                    }
+
+                    <span class="purple">p</span> {
+                    <span class="rose">color</span>: red;
+                    }
+                </code>
+
+                <p>The href attribute of the &lt;link&gt; element needs to reference a file on your file system. In the
+                    example above, the CSS file is in the same folder as the HTML document, but you could place it
+                    somewhere else and adjust the path. Here are three examples:
+                </p>
+
+                <code>
+                    &lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
+                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/style.css</span>" /&gt;
+
+                    &lt;!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory --&gt;
+                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/general/style.css</span>" /&gt;
+
+                    &lt;!-- Go up one directory level, then inside a subdirectory called styles --&gt;
+                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">../styles/style.css</span>" /&gt;
+                </code>
+            </section>
+
+            <section class="main-section" id="Internal_stylesheet">
+                <h2>Internal stylesheet</h2>
+                <p>An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place
+                    CSS inside a &lt;style&lt; element contained inside the HTML &lt;head&gt;.</p>
+
+                <p>The HTML for an internal stylesheet might look like this:</p>
+
+                <code>
+                    &lt;!doctype html&lt;
+                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&lt;
+                    &lt;<span class="green">head</span>&gt;
+                        &lt;meta charset="utf-8" /&lt;
+                        &lt;title&lt;My CSS experiment&gt;/title&lt;
+                        &lt;style&lt;
+                            h1 {
+                                color: blue;
+                                background-color: yellow;
+                                border: 1px solid black;
+                            }
+
+                            p {
+                                color: red;
+                            }
+                        &lt;/style&lt;
+                    &lt;/head&lt;
+                    &lt;body&lt;
+                    &lt;h1&lt;Hello World!&lt;/h1&lt;
+                    &lt;p&lt;This is my first CSS example&lt;/p&lt;
+                    &lt;/body&lt;
+                    &lt;/html&lt;
+                </code>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+
+            <section class="main-section">
+                <h2></h2>
+            </section>
+        </main>
+    </body>
 </html>
