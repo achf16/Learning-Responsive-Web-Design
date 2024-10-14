@@ -7,11 +7,32 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+    <!--TODO: add accessibility-->
+    <!--TODO: The project should have at least one media query-->
         <header>
             <div class="left-menu">
                 <h1>CSS Documentation</h1>
+                <nav id="navbar">
+                    <ul>
+                        <li><a class="nav-link" href="#What_is_CSS">What is CSS?</a></li>
+                        <li><a class="nav-link" href="#What_is_CSS_for">What is CSS for?</a></li>
+                        <li><a class="nav-link" href="#CSS_syntax">CSS syntax</a></li>
+                        <li><a class="nav-link" href="#CSS_modules">CSS modules</a></li>
+                        <li><a class="nav-link" href="#CSS_specifications">CSS specifications</a></li>
+                        <li><a class="nav-link" href="#External_stylesheet">External stylesheet</a></li>
+                        <li><a class="nav-link" href="#Internal_stylesheet">Internal stylesheet</a></li>
+                        <li><a class="nav-link" href="#Inline_styles">Inline styles</a></li>
+                        <li><a class="nav-link" href="#About_the_DOM">About the DOM</a></li>
+                        <li><a class="nav-link" href="#What_is_a_pseudo_class">What is a pseudo class?</a></li>
+                        <li><a class="nav-link" href="#User_action_pseudo_classes">User action pseudo classes</a></li>
+                        <li><a class="nav-link" href="#What_is_a_pseudo_element">What is a pseudo-element?</a></li>
+                        <li><a class="nav-link" href="#Generating_content_with">Generating content with ::before and ::after</a></li>
+                        <li><a class="nav-link" href="#Descendant_combinator">Descendant combinator</a></li>
+                        <li><a class="nav-link" href="#Child_combinator">Child combinator</a></li>
+                        <li><a class="nav-link" href="#Reference">Reference</a></li>
+                    </ul>
+                </nav>
             </div>
-
         </header>
         <main id="main-doc">
             <section class="main-section" id="What_is_CSS">
@@ -127,7 +148,7 @@
 
             </section>
 
-            <section class="main-section" id="External stylesheet">
+            <section class="main-section" id="External_stylesheet">
                 <h2>External stylesheet</h2>
                 <p>An external stylesheet contains CSS in a separate file with a .css extension. This is the most
                     common and useful method of bringing CSS to a document. You can link a single CSS file to multiple
@@ -139,15 +160,15 @@
                 <code>
                     &lt;!doctype html&gt;
                     &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
-                    &lt;<span class="green">head</span>&gt;
-                        &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
-                        &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
-                        &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles.css</span>"/&gt;
-                    &lt;/<span class="green">head</span>&gt;
-                    &lt;<span class="green">body</span>&gt;
-                    &lt;<span class="green">h1</span>&gt;Hello World!&lt;/<span class="green">h1</span>&gt;
-                    &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
-                    &lt;/<span class="green">body</span>&gt;
+                        &lt;<span class="green">head</span>&gt;
+                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
+                            &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
+                            &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles.css</span>"/&gt;
+                        &lt;/<span class="green">head</span>&gt;
+                        &lt;<span class="green">body</span>&gt;
+                            &lt;<span class="green">h1</span>&gt;Hello World!&lt;/<span class="green">h1</span>&gt;
+                            &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                        &lt;/<span class="green">body</span>&gt;
                     &lt;/<span class="green">html</span>&gt;
                 </code>
 
@@ -190,65 +211,157 @@
                 <p>The HTML for an internal stylesheet might look like this:</p>
 
                 <code>
-                    &lt;!doctype html&lt;
-                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&lt;
-                    &lt;<span class="green">head</span>&gt;
-                        &lt;meta charset="utf-8" /&lt;
-                        &lt;title&lt;My CSS experiment&gt;/title&lt;
-                        &lt;style&lt;
-                            h1 {
-                                color: blue;
-                                background-color: yellow;
-                                border: 1px solid black;
-                            }
+                    &lt;!doctype html&gt;
+                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                        &lt;<span class="green">head</span>&gt;
+                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>"/&gt;
+                            &lt;<span class="green">title</span>&lt;My CSS experiment&gt;/<span class="green">title</span>&gt;
+                            &lt;<span class="green">style</span>&gt;
+                                <span class="purple">h1</span> {
+                                    <span class="rose">color</span>: blue;
+                                    <span class="rose">background-color</span>: yellow;
+                                    <span class="rose">border</span>: 1px solid black;
+                                }
 
-                            p {
-                                color: red;
-                            }
-                        &lt;/style&lt;
-                    &lt;/head&lt;
-                    &lt;body&lt;
-                    &lt;h1&lt;Hello World!&lt;/h1&lt;
-                    &lt;p&lt;This is my first CSS example&lt;/p&lt;
-                    &lt;/body&lt;
-                    &lt;/html&lt;
+                                <span class="purple">p</span> {
+                                    <span class="rose">color</span>: red;
+                                }
+                            &lt;/<span class="green">style</span>&gt;
+                        &lt;/<span class="green">head</span>&gt;
+                        &lt;<span class="green">body</span>&gt;
+                            &lt;<span class="green">h1</span>&lt;Hello World!&lt;/<span class="green">h1</span>&gt;
+                            &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                        &lt;/<span class="green">body</span>&gt;
+                    &lt;/<span class="green">html</span>&gt;
                 </code>
+
+                <p>In some circumstances, internal stylesheets can be useful. For example, perhaps you're working with
+                    a content management system where you are blocked from modifying external CSS files.</p>
+
+                <p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of
+                    working. To apply uniform CSS styling to multiple pages using internal stylesheets, you must have
+                    an internal stylesheet in every web page that will use the styling. The efficiency penalty carries
+                    over to site maintenance too. With CSS in internal stylesheets, there is the risk that even one
+                    simple styling change may require edits to multiple web pages.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="Inline_styles">
+                <h2>Inline styles</h2>
+                <p>Inline styles are CSS declarations that affect a single HTML element, contained within a style
+                    attribute. The implementation of an inline style in an HTML document might look like this:</p>
+                <code>
+                    &lt;!doctype html&gt;
+                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                        &lt;<span class="green">head</span>&gt;
+                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
+                            &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
+                        &lt;/<span class="green">head</span>&gt;
+                        &lt;<span class="green">body</span>&gt;
+                            &lt;<span class="green">h1</span> <span class="rose">style</span>="<span class="rose">color</span>: <span class="green">blue</span>;<span class="rose">background-color</span>: <span class="green">yellow</span>;<span class="rose">border</span>: <span class="green">1px solid black</span>;"&gt;
+                                Hello World!
+                            &lt;/<span class="green">h1</span>&gt;
+                            &lt;<span class="green">p</span> <span class="rose">style</span>="<span class="rose">color</span>:<span class="green">red</span>;"&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                        &lt;/<span class="green">body</span>&gt;
+                    &lt;/<span class="green">html</span>&gt;
+                </code>
+
+                <p>Avoid using CSS in this way, when possible. It is the opposite of a best practice. First, it is the
+                    least efficient implementation of CSS for maintenance. One styling change might require multiple
+                    edits within a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML
+                    and content, making everything more difficult to read and understand. Separating code and content
+                    makes maintenance easier for all who work on the website.</p>
+                <p>There are a few circumstances where inline styles are more common. You might have to resort to
+                    using inline styles if your working environment is very restrictive. For example, perhaps your CMS
+                    only allows you to edit the HTML body. You may also see a lot of inline styles in HTML email to
+                    achieve compatibility with as many email clients as possible.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="About_the_DOM">
+                <h2>About the DOM</h2>
+                <p>A DOM has a tree-like structure. Each element, attribute, and piece of text in the markup language
+                    becomes a DOM node in the tree structure. The nodes are defined by their relationship to other DOM
+                    nodes. Some elements are parents of child nodes, and child nodes have siblings.</p>
+                <p>Understanding the DOM helps you design, debug and maintain your CSS because the DOM is where your
+                    CSS and the document's content meet up. When you start working with browser DevTools you will be
+                    navigating the DOM as you select items in order to see which rules apply.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="What_is_a_pseudo_class">
+                <h2>What is a pseudo-class?</h2>
+                <p>A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the
+                    first element of their type, or they are being hovered over by the mouse pointer. They tend to act
+                    as if you had applied a class to some part of your document, often helping you cut down on excess
+                    classes in your markup, and giving you more flexible, maintainable code.</p>
+                <p>Pseudo-classes are keywords that start with a colon. For example, <span class="makeup"> : hover</span> is a pseudo-class.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="User_action_pseudo_classes">
+                <h2>User-action pseudo classes</h2>
+                <p>Some pseudo-classes only apply when the user interacts with the document in some way. These
+                    user-action pseudo-classes, sometimes referred to as dynamic pseudo-classes, act as if a class had
+                    been added to the element when the user interacts with it. Examples include:
+                </p>
+                <ul>
+                    <li><span class="makeup"> : hover</span> — mentioned above; this only applies if the user moves their pointer over an element, typically a link.</li>
+                    <li><span class="makeup"> : focus</span> — only applies if the user focuses the element by clicking or using keyboard controls.</li>
+                </ul>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="What_is_a_pseudo_element">
+                <h2>What is a pseudo-element?</h2>
+                <p>Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML
+                    element into the markup, rather than applying a class to existing elements.
+                </p>
+                <p>Pseudo-elements start with a double colon <span class="makeup"> : :</span>.
+                    ( <span class="makeup"> :: before</span> is an example of a pseudo-element.)</p>
+
+                <p>For example, if you wanted to select the first line of a paragraph you could wrap it in a &lt;span&gt;
+                    element and use an element selector; however, that would fail if the number of words you had
+                    wrapped were longer or shorter than the parent element's width. As we tend not to know how many
+                    words will fit on a line — as that will change if the screen width or font-size changes — it is
+                    impossible to robustly do this by adding HTML.
+                </p>
+                <p>The <span class="makeup"> : : first-line</span> pseudo-element selector will do this for you reliably — if the number of words
+                    increases or decreases it will still only select the first line.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="Generating_content_with">
+                <h2>Generating content with ::before and ::after</h2>
+                <p>There are a couple of special pseudo-elements, which are used along with the content property to
+                    insert content into your document using CSS.</p>
+                <p>You could use these to insert a string of text, such as in the live example below. Try changing the
+                    text value of the content property and see it change in the output. You could also change the
+                    <span class="makeup">::before</span> pseudo-element to <span class="makeup">::after</span> and see the text inserted at the end of the element instead of
+                    the beginning.</p>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="Descendant_combinator">
+                <h2>Descendant combinator</h2>
+                <p>The descendant combinator — typically represented by a single space (" ") character — combines two
+                    selectors such that elements matched by the second selector are selected if they have an ancestor
+                    (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector.
+                    Selectors that utilize a descendant combinator are called descendant selectors.</p>
+                <code>body article p</code>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="Child_combinator">
+                <h2>Child combinator</h2>
+                <p>The child combinator (>) is placed between two CSS selectors. It matches only those elements
+                    matched by the second selector that are the direct children of elements matched by the first.
+                    Descendant elements further down the hierarchy don't match. For example, to select only &lt;p&gt;
+                    elements that are direct children of &lt;article&gt; elements:</p>
+                <code>article > p</code>
             </section>
 
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="Reference">
+                <h2>Reference</h2>
+                <ul>
+                    <li>All the documentation in this page is taken from
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#playing_with_the_css_in_this_article"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            MDN</a></li>
+                </ul>
             </section>
         </main>
     </body>
