@@ -9,10 +9,10 @@
     <body>
     <!--TODO: add accessibility-->
     <!--TODO: The project should have at least one media query-->
-        <header>
-            <div class="left-menu">
-                <h1>CSS Documentation</h1>
+        <div class="left-menu">
+            <header>
                 <nav id="navbar">
+                    <h1>CSS Documentation</h1>
                     <ul>
                         <li><a class="nav-link" href="#What_is_CSS">What is CSS?</a></li>
                         <li><a class="nav-link" href="#What_is_CSS_for">What is CSS for?</a></li>
@@ -32,18 +32,18 @@
                         <li><a class="nav-link" href="#Reference">Reference</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
+            </header>
+        </div>
         <main id="main-doc">
             <section class="main-section" id="What_is_CSS">
-                <h2>What is CSS</h2>
+                <header><h2>What is CSS</h2></header>
                 <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work
                     under the hood? This article explains what CSS is with a simple syntax example and also covers some
                     key terms about the language.</p>
             </section>
 
             <section class="main-section" id="What_is_CSS_for">
-                <h2>What is CSS for?</h2>
+                <header><h2>What is CSS for</h2></header>
                 <p>CSS can be used for very basic document text styling — for example, for changing the color and size
                     of headings and links. It can be used to create a layout — for example, turning a single column of
                     text into a layout with a main content area and a sidebar for related information. It can even be
@@ -52,22 +52,22 @@
             </section>
 
             <section class="main-section" id="CSS_syntax">
-                <h2>CSS syntax</h2>
+                <header><h2>CSS syntax</h2></header>
                 <p>CSS is a rule-based language — you define the rules by specifying groups of styles that should be
                     applied to particular elements or groups of elements on your web page.
                 </p>
                 <p>For example, you can decide to have the main heading on your page to be shown as large red text.
                     The following code shows a very simple CSS rule that would achieve the styling described above:</p>
 
-                <!--TODO: make the code look alike real code-->
                 <!--TODO: give a background color to #212121-->
-                <code>
-                    <span class="purple">h1</span> {
-                    <span class="rose">color</span>: red;
-                    <span class="rose">font-size</span>: 5em;
-                    }
-                </code>
-
+                <div class="code_back">
+                    <code>
+                        <span class="purple">h1</span> {
+                        <span class="rose">color</span>: red;
+                        <span class="rose">font-size</span>: 5em;
+                        }
+                    </code>
+                </div>
                 <ul>
                     <li>In the above example, the CSS rule opens with a selector.</li>
                     <li>This selects the HTML element that we are going to style. In this case, we are styling level
@@ -83,16 +83,18 @@
 
                 <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
 
-                <code>
-                    <span class="purple">h1</span> {
-                    <span class="rose">color</span>: red;
-                    <span class="rose">font-size</span>: 5em;
-                    }
+                <div class="code_back">
+                    <code>
+                        <span class="purple">h1</span> {
+                        <span class="rose">color</span>: red;
+                        <span class="rose">font-size</span>: 5em;
+                        }
 
-                    <span class="purple">p</span> {
-                    <span class="rose">color</span>: black;
-                    }
-                </code>
+                        <span class="purple">p</span> {
+                        <span class="rose">color</span>: black;
+                        }
+                    </code>
+                </div>
 
                 <p>You will find that you quickly learn some values, whereas others you will need to look up. The
                     individual property pages on MDN give you a quick way to look up properties and their values when
@@ -100,7 +102,7 @@
             </section>
 
             <section class="main-section" id="CSS_modules">
-                <h2>CSS modules</h2>
+                <header><h2>CSS modules</h2></header>
                 <p>
                     As there are so many things that you could style using CSS, the language is broken down into
                     modules. You'll see reference to these modules as you explore MDN. Many of the documentation pages
@@ -122,7 +124,7 @@
             </section>
 
             <section class="main-section" id="CSS_specifications">
-                <h2>CSS specifications</h2>
+                <header><h2>CSS specifications</h2></header>
                 <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called
                     specifications (or "specs"), which are published by standards organizations (such as the W3C,
                     WHATWG, ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
@@ -149,7 +151,7 @@
             </section>
 
             <section class="main-section" id="External_stylesheet">
-                <h2>External stylesheet</h2>
+                <header> <h2>External stylesheet</h2></header>
                 <p>An external stylesheet contains CSS in a separate file with a .css extension. This is the most
                     common and useful method of bringing CSS to a document. You can link a single CSS file to multiple
                     web pages, styling all of them with the same CSS stylesheet. In the Getting started with CSS, we
@@ -157,83 +159,91 @@
                 </p>
 
                 <p> You reference an external CSS stylesheet from an HTML &lt;link&gt; element:</p>
-                <code>
-                    &lt;!doctype html&gt;
-                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
-                        &lt;<span class="green">head</span>&gt;
-                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
-                            &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
-                            &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles.css</span>"/&gt;
-                        &lt;/<span class="green">head</span>&gt;
-                        &lt;<span class="green">body</span>&gt;
-                            &lt;<span class="green">h1</span>&gt;Hello World!&lt;/<span class="green">h1</span>&gt;
-                            &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
-                        &lt;/<span class="green">body</span>&gt;
-                    &lt;/<span class="green">html</span>&gt;
-                </code>
+                <div class="code_back">
+                    <code>
+                        &lt;!doctype html&gt;
+                        &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                            &lt;<span class="green">head</span>&gt;
+                                &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
+                                &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
+                                &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles.css</span>"/&gt;
+                            &lt;/<span class="green">head</span>&gt;
+                            &lt;<span class="green">body</span>&gt;
+                                &lt;<span class="green">h1</span>&gt;Hello World!&lt;/<span class="green">h1</span>&gt;
+                                &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                            &lt;/<span class="green">body</span>&gt;
+                        &lt;/<span class="green">html</span>&gt;
+                    </code>
+                </div>
 
                 <p>The CSS stylesheet file might look like this:</p>
+                <div class="code_back">
+                    <code>
+                        <span class="purple">h1</span> {
+                        <span class="rose">color</span>: blue;
+                        <span class="rose">background-color</span>: yellow;
+                        <span class="rose">border</span>: 1px solid black;
+                        }
 
-                <code>
-                    <span class="purple">h1</span> {
-                    <span class="rose">color</span>: blue;
-                    <span class="rose">background-color</span>: yellow;
-                    <span class="rose">border</span>: 1px solid black;
-                    }
-
-                    <span class="purple">p</span> {
-                    <span class="rose">color</span>: red;
-                    }
-                </code>
+                        <span class="purple">p</span> {
+                        <span class="rose">color</span>: red;
+                        }
+                    </code>
+                </div>
 
                 <p>The href attribute of the &lt;link&gt; element needs to reference a file on your file system. In the
                     example above, the CSS file is in the same folder as the HTML document, but you could place it
                     somewhere else and adjust the path. Here are three examples:
                 </p>
 
-                <code>
-                    &lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
-                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/style.css</span>" /&gt;
+                <div class="code_back">
+                    <code>
+                        &lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
+                        &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/style.css</span>" /&gt;
 
-                    &lt;!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory --&gt;
-                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/general/style.css</span>" /&gt;
+                        &lt;!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory --&gt;
+                        &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">styles/general/style.css</span>" /&gt;
 
-                    &lt;!-- Go up one directory level, then inside a subdirectory called styles --&gt;
-                    &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">../styles/style.css</span>" /&gt;
-                </code>
+                        &lt;!-- Go up one directory level, then inside a subdirectory called styles --&gt;
+                        &lt;<span class="green">link</span> <span class="rose">rel</span>="<span class="green">stylesheet</span>" <span class="rose">href</span>="<span class="green">../styles/style.css</span>" /&gt;
+                    </code>
+                </div>
+
             </section>
 
             <section class="main-section" id="Internal_stylesheet">
-                <h2>Internal stylesheet</h2>
+                <header><h2>Internal stylesheet</h2></header>
                 <p>An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place
                     CSS inside a &lt;style&lt; element contained inside the HTML &lt;head&gt;.</p>
 
                 <p>The HTML for an internal stylesheet might look like this:</p>
 
-                <code>
-                    &lt;!doctype html&gt;
-                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
-                        &lt;<span class="green">head</span>&gt;
-                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>"/&gt;
-                            &lt;<span class="green">title</span>&lt;My CSS experiment&gt;/<span class="green">title</span>&gt;
-                            &lt;<span class="green">style</span>&gt;
-                                <span class="purple">h1</span> {
-                                    <span class="rose">color</span>: blue;
-                                    <span class="rose">background-color</span>: yellow;
-                                    <span class="rose">border</span>: 1px solid black;
-                                }
+                <div class="code_back">
+                    <code>
+                        &lt;!doctype html&gt;
+                        &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                            &lt;<span class="green">head</span>&gt;
+                                &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>"/&gt;
+                                &lt;<span class="green">title</span>&lt;My CSS experiment&gt;/<span class="green">title</span>&gt;
+                                &lt;<span class="green">style</span>&gt;
+                                    <span class="purple">h1</span> {
+                                        <span class="rose">color</span>: blue;
+                                        <span class="rose">background-color</span>: yellow;
+                                        <span class="rose">border</span>: 1px solid black;
+                                    }
 
-                                <span class="purple">p</span> {
-                                    <span class="rose">color</span>: red;
-                                }
-                            &lt;/<span class="green">style</span>&gt;
-                        &lt;/<span class="green">head</span>&gt;
-                        &lt;<span class="green">body</span>&gt;
-                            &lt;<span class="green">h1</span>&lt;Hello World!&lt;/<span class="green">h1</span>&gt;
-                            &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
-                        &lt;/<span class="green">body</span>&gt;
-                    &lt;/<span class="green">html</span>&gt;
-                </code>
+                                    <span class="purple">p</span> {
+                                        <span class="rose">color</span>: red;
+                                    }
+                                &lt;/<span class="green">style</span>&gt;
+                            &lt;/<span class="green">head</span>&gt;
+                            &lt;<span class="green">body</span>&gt;
+                                &lt;<span class="green">h1</span>&lt;Hello World!&lt;/<span class="green">h1</span>&gt;
+                                &lt;<span class="green">p</span>&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                            &lt;/<span class="green">body</span>&gt;
+                        &lt;/<span class="green">html</span>&gt;
+                    </code>
+                </div>
 
                 <p>In some circumstances, internal stylesheets can be useful. For example, perhaps you're working with
                     a content management system where you are blocked from modifying external CSS files.</p>
@@ -246,24 +256,26 @@
             </section>
 
             <section class="main-section" id="Inline_styles">
-                <h2>Inline styles</h2>
+                <header><h2>Inline styles</h2></header>
                 <p>Inline styles are CSS declarations that affect a single HTML element, contained within a style
                     attribute. The implementation of an inline style in an HTML document might look like this:</p>
-                <code>
-                    &lt;!doctype html&gt;
-                    &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
-                        &lt;<span class="green">head</span>&gt;
-                            &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
-                            &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
-                        &lt;/<span class="green">head</span>&gt;
-                        &lt;<span class="green">body</span>&gt;
-                            &lt;<span class="green">h1</span> <span class="rose">style</span>="<span class="rose">color</span>: <span class="green">blue</span>;<span class="rose">background-color</span>: <span class="green">yellow</span>;<span class="rose">border</span>: <span class="green">1px solid black</span>;"&gt;
-                                Hello World!
-                            &lt;/<span class="green">h1</span>&gt;
-                            &lt;<span class="green">p</span> <span class="rose">style</span>="<span class="rose">color</span>:<span class="green">red</span>;"&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
-                        &lt;/<span class="green">body</span>&gt;
-                    &lt;/<span class="green">html</span>&gt;
-                </code>
+                <div class="code_back">
+                    <code>
+                        &lt;!doctype html&gt;
+                        &lt;<span class="green">html</span> <span class="rose">lang</span>="<span class="green">en-GB</span>"&gt;
+                            &lt;<span class="green">head</span>&gt;
+                                &lt;<span class="green">meta</span> <span class="rose">charset</span>="<span class="green">utf-8</span>" /&gt;
+                                &lt;<span class="green">title</span>&gt;My CSS experiment&lt;/<span class="green">title</span>&gt;
+                            &lt;/<span class="green">head</span>&gt;
+                            &lt;<span class="green">body</span>&gt;
+                                &lt;<span class="green">h1</span> <span class="rose">style</span>="<span class="rose">color</span>: <span class="green">blue</span>;<span class="rose">background-color</span>: <span class="green">yellow</span>;<span class="rose">border</span>: <span class="green">1px solid black</span>;"&gt;
+                                    Hello World!
+                                &lt;/<span class="green">h1</span>&gt;
+                                &lt;<span class="green">p</span> <span class="rose">style</span>="<span class="rose">color</span>:<span class="green">red</span>;"&gt;This is my first CSS example&lt;/<span class="green">p</span>&gt;
+                            &lt;/<span class="green">body</span>&gt;
+                        &lt;/<span class="green">html</span>&gt;
+                    </code>
+                </div>
 
                 <p>Avoid using CSS in this way, when possible. It is the opposite of a best practice. First, it is the
                     least efficient implementation of CSS for maintenance. One styling change might require multiple
@@ -277,7 +289,7 @@
             </section>
 
             <section class="main-section" id="About_the_DOM">
-                <h2>About the DOM</h2>
+                <header><h2>About the DOM</h2></header>
                 <p>A DOM has a tree-like structure. Each element, attribute, and piece of text in the markup language
                     becomes a DOM node in the tree structure. The nodes are defined by their relationship to other DOM
                     nodes. Some elements are parents of child nodes, and child nodes have siblings.</p>
@@ -287,7 +299,7 @@
             </section>
 
             <section class="main-section" id="What_is_a_pseudo_class">
-                <h2>What is a pseudo-class?</h2>
+                <header><h2>What is a pseudo-class</h2></header>
                 <p>A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the
                     first element of their type, or they are being hovered over by the mouse pointer. They tend to act
                     as if you had applied a class to some part of your document, often helping you cut down on excess
@@ -296,7 +308,7 @@
             </section>
 
             <section class="main-section" id="User_action_pseudo_classes">
-                <h2>User-action pseudo classes</h2>
+                <header><h2>User action pseudo classes</h2></header>
                 <p>Some pseudo-classes only apply when the user interacts with the document in some way. These
                     user-action pseudo-classes, sometimes referred to as dynamic pseudo-classes, act as if a class had
                     been added to the element when the user interacts with it. Examples include:
@@ -308,7 +320,7 @@
             </section>
 
             <section class="main-section" id="What_is_a_pseudo_element">
-                <h2>What is a pseudo-element?</h2>
+                <header><h2>What is a pseudo element</h2></header>
                 <p>Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML
                     element into the markup, rather than applying a class to existing elements.
                 </p>
@@ -326,7 +338,7 @@
             </section>
 
             <section class="main-section" id="Generating_content_with">
-                <h2>Generating content with ::before and ::after</h2>
+                <header><h2>Generating content with</h2></header>
                 <p>There are a couple of special pseudo-elements, which are used along with the content property to
                     insert content into your document using CSS.</p>
                 <p>You could use these to insert a string of text, such as in the live example below. Try changing the
@@ -336,25 +348,25 @@
             </section>
 
             <section class="main-section" id="Descendant_combinator">
-                <h2>Descendant combinator</h2>
+                <header><h2>Descendant combinator</h2></header>
                 <p>The descendant combinator — typically represented by a single space (" ") character — combines two
                     selectors such that elements matched by the second selector are selected if they have an ancestor
                     (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector.
                     Selectors that utilize a descendant combinator are called descendant selectors.</p>
-                <code>body article p</code>
+                <div class="code_back"><code>body article p</code></div>
             </section>
 
             <section class="main-section" id="Child_combinator">
-                <h2>Child combinator</h2>
+                <header><h2>Child combinator</h2></header>
                 <p>The child combinator (>) is placed between two CSS selectors. It matches only those elements
                     matched by the second selector that are the direct children of elements matched by the first.
                     Descendant elements further down the hierarchy don't match. For example, to select only &lt;p&gt;
                     elements that are direct children of &lt;article&gt; elements:</p>
-                <code>article > p</code>
+                <div class="code_back"><code>article > p</code></div>
             </section>
 
             <section class="main-section" id="Reference">
-                <h2>Reference</h2>
+                <header><h2>Reference</h2></header>
                 <ul>
                     <li>All the documentation in this page is taken from
                         <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#playing_with_the_css_in_this_article"

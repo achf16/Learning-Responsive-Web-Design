@@ -1,16 +1,35 @@
-*{
-    box-sizing: border-box;
-    border: 1px solid green;
+@media (prefers-reduced-motion : no-preference)
+{   *{
+    scroll-behavior: smooth;
+    }
 }
 
-html{
+*{
+    box-sizing: border-box;
+    /*border: 1px solid green;*/
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    padding-top: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
     background-color: #454F4F;
     color: #F1F3FE;
-    display: block;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 code{
     white-space: pre-wrap;
+}
+
+.code_back{
+    background-color: #212121;
 }
 
 .purple{
@@ -34,17 +53,77 @@ header a{
     text-decoration: none;
 }
 
-header{
-    width: 30vw;
-    height: 100%;
+.left-menu {
+    width: 375px;
+    background-color: #454F4F;
+    overflow-y: auto; /* Scrollable sidebar */
+    padding: 0 20px 20px 20px;
+}
+
+.left-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.left-menu a:hover {
+    background-color: #172226;
+}
+
+li > a {
+    text-decoration: none;
 }
 
 main{
-    width: 60vw;
+    flex-grow: 1; /* Content takes the remaining space */
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
 }
 
-/*
-.left-menu{
-    position: fixed;
+.left-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-}*/
+main{
+    position: fixed;
+    left: 400px;
+    top: 75px;
+    padding-bottom: 150px;
+}
+
+main a{
+    color: yellow;
+    font-style: italic;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+    }
+
+    .left-menu {
+        width: 100%; /* Sidebar takes full width on small screens */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    main {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+        height: 100%;
+        padding-bottom: 150px;
+        position: sticky;
+        /* Removed fixed positioning */
+    }
+}
